@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
-import { Country } from "../types/apartmentTypes";
+import { City } from "../types/apartmentTypes";
 
-export const useCountry = (id = '') => {
-    const [country, setCountry] = useState<Country>()
+export const useLocationCity = (id = '') => {
+    const [city, setCity] = useState<City>()
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(false);
     const versionAPI = import.meta.env.VITE_APP_API_VERSION;
     const baseURL = import.meta.env.VITE_APP_API_BASE_URL;
-    const resource = import.meta.env.VITE_APP_API_RESOURCE_COUNTRIES;
+    const resource = import.meta.env.VITE_APP_API_RESOURCE_CITY;
     const url = `${baseURL}/${versionAPI}/${resource}/${id}` || ''
 
     useEffect(() => {
@@ -15,7 +15,7 @@ export const useCountry = (id = '') => {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                setCountry(data)
+                setCity(data)
             })
             .catch(error => {
                 setError(error)
@@ -23,5 +23,5 @@ export const useCountry = (id = '') => {
             .finally(() => setLoading(false))
     }, [url])
 
-    return { country, loading, error }
+    return { city, loading, error }
 }
