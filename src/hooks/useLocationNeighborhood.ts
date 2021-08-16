@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Neighborhood } from "../types/apartmentTypes";
 
 export const useLocationNeighborhood = (id = 0) => {
-    const [neighborhood, setNeighborhood] = useState<Neighborhood>()
+    const [neighborhood, setNeighborhood] = useState<Neighborhood | null>(null)
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(false);
     const versionAPI = import.meta.env.VITE_APP_API_VERSION;

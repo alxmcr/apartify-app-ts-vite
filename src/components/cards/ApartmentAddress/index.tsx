@@ -1,16 +1,17 @@
-import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
 import { ApartmentAddressProps } from "../../../types/apartmentComponents";
 
-export const ApartmentAddress = ({ apartment }: ApartmentAddressProps) => {
-  const {} = useLocationNeighborhood(apartment.ne_neighborhood);
-
+export const ApartmentAddress = ({
+  ap_street_name = "",
+  ap_ext_number = "",
+  neighborhood,
+}: ApartmentAddressProps) => {
   return (
     <p className="address">
-      <span className="address__neighborhood">
-        {apartment?.ap_address?.ap_neighborhood}
-      </span>
+      {neighborhood !== null ? (
+        <span className="address__neighborhood">{neighborhood?.ne_name}</span>
+      ) : null}
       <span className="address__street">
-        {`, ${apartment?.ap_address?.ap_street_name} ${apartment?.ap_address?.ap_street_number}`}
+        {`, ${ap_street_name} ${ap_ext_number}`}
       </span>
     </p>
   );

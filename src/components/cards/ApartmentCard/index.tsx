@@ -1,12 +1,22 @@
 import { useHistory } from "react-router-dom";
+import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
 import { ApartmentCardProps } from "../../../types/apartmentComponents";
-import { FeatureList } from "../../FeatureList";
+import { FeatureList } from "../../lists/FeatureList";
+import { BallsLoader } from "../../loaders/BallsLoader";
+import { ApartmentAddress } from "../ApartmentAddress";
 import "./ApartmentCard.scss";
 
 export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
+  const { neighborhood, loading, error } = useLocationNeighborhood(
+    apartment.ne_neighborhood
+  );
   const history = useHistory();
   const redirectToApartPage = () =>
     history.push(`/apartments/${apartment.ap_apartment}`);
+
+  if (loading) return <BallsLoader />;
+  if (error !== null) return <p>There was an error with this apartment.</p>;
+
   return (
     <div
       className="apartmentcard"
@@ -30,14 +40,11 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
             {apartment?.ap_cost_offer}
           </span>
         </p>
-        <p className="apartmentcard__address">
-          <span className="apartmentcard__neighborhood">
-            {apartment?.ap_address?.ap_neighborhood}
-          </span>
-          <span className="apartmentcard__street">
-            {`, ${apartment?.ap_address?.ap_street_name} ${apartment?.ap_address?.ap_street_number}`}
-          </span>
-        </p>
+        <ApartmentAddress
+          ap_street_name={apartment.ap_street_name}
+          ap_ext_number={apartment.ap_ext_number}
+          neighborhood={neighborhood}
+        />
         <FeatureList features={apartment?.features} />
       </div>
     </div>
