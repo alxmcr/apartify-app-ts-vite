@@ -10,7 +10,7 @@ export interface ApartmentAddressProps {
   neighborhood: Neighborhood | null;
 }
 
-export interface ApartmentDescriptionCardProps {
+export interface ApartmentDescriptionProps {
   description: string;
 }
 
