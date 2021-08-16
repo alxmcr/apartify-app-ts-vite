@@ -1,0 +1,15 @@
+.apartmentsgrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .apartmentsgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}

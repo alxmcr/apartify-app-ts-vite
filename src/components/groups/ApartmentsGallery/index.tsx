@@ -1,4 +1,4 @@
-import { ApartmentsGalleryProps } from "../../types/apartmentComponents";
+import { ApartmentsGalleryProps } from "../../../types/apartmentComponents";
 import { AparmentsGrid } from "../AparmentsGrid";
 import "./ApartmentsGallery.scss";
 

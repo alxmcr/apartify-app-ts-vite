@@ -53,6 +53,10 @@ export interface ApartmentImagesProps {
   images: Photo[] | null;
 }
 
+export interface ApartmentsGalleryProps {
+  apartments: Apartment[];
+}
+
 // -- Routing --
 export interface ApartmentPageParamsProps {
   id: string;
