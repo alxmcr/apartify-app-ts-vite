@@ -1,27 +1,26 @@
 import { useParams } from "react-router-dom";
-import { ApartmentImages } from "../../components/ApartmentImages";
-import { ApartmentDescriptionCard } from "../../components/cards/ApartmentDescriptionCard";
-import { ApartmentDetailsCard } from "../../components/cards/ApartmentDetailsCard";
-import { ApartmentFeaturesCard } from "../../components/cards/ApartmentFeaturesCard";
-import { ApartmentFlatImageCard } from "../../components/cards/ApartmentFlatImageCard";
-import { ApartmentInvestmentsCard } from "../../components/cards/ApartmentInvestmentsCard";
-import { ApartmentMapMarkerCard } from "../../components/cards/ApartmentMapMarkerCard";
-import { ApartmentPleasantnessCard } from "../../components/cards/ApartmentPleasantnessCard";
-import { ApartmentVisitCard } from "../../components/cards/ApartmentVisitCard";
 import { AppLoading } from "../../components/common/AppLoading";
+import { ApartmentDescription } from "../../components/pieces/ApartmentDescription";
+import { ApartmentDetails } from "../../components/pieces/ApartmentDetails";
+import { ApartmentFeatures } from "../../components/pieces/ApartmentFeatures";
+import { ApartmentFlatImageCard } from "../../components/pieces/ApartmentFlatImage";
+import { ApartmentInvestments } from "../../components/pieces/ApartmentInvestments";
+import { ApartmentOutdoorSpaces } from "../../components/pieces/ApartmentOutdoorSpaces";
+import { ApartmentVisit } from "../../components/pieces/ApartmentVisit";
 import { useApartment } from "../../hooks/useApartment";
 import { ApartmentPageParamsProps } from "../../types/apartmentComponents";
+
 import "./ApartmentPage.scss";
 
 export const ApartmentPage = () => {
   const { id } = useParams<ApartmentPageParamsProps>();
-  const { apartment, loading, error } = useApartment(id);
+  const { apartment, loadingApartment, errorApartment } = useApartment(id);
 
-  if (error !== null) return <p>There was an error</p>;
+  if (errorApartment !== null) return <p>There was an error</p>;
 
   return (
     <div className="apartmentpage" id={id}>
-      {loading ? (
+      {loadingApartment ? (
         <AppLoading />
       ) : (
         <>
@@ -33,26 +32,24 @@ export const ApartmentPage = () => {
             <div className="apartmentpage__column apartmentpage__column--details">
               {apartment !== undefined ? (
                 <>
-                  <ApartmentDetailsCard apartment={apartment} />
-                  <ApartmentDescriptionCard
+                  <ApartmentDetails apartment={apartment} />
+                  <ApartmentDescription
                     description={apartment?.ap_description}
                   />
-                  <ApartmentFeaturesCard features={apartment?.ap_features} />
-                  <ApartmentPleasantnessCard
-                    pleasantness={apartment?.ap_pleasantness}
+                  <ApartmentFeatures features={apartment?.features} />
+                  <ApartmentOutdoorSpaces
+                    outdoorSpaces={apartment?.outdoor_spaces}
                   />
-                  {/* <ApartmentMapMarkerCard
+                  {/* <ApartmentMapMarker
                     coordinates={apartment?.ap_coordinates}
                   /> */}
-                  <ApartmentInvestmentsCard
-                    investments={apartment?.ap_investments}
-                  />
-                  <ApartmentFlatImageCard flat_image={apartment.ap_flat} />
+                  <ApartmentInvestments investments={apartment?.investments} />
+                  {/* <ApartmentFlatImageCard flat={apartment.} /> */}
                 </>
               ) : null}
             </div>
             <div className="apartmentpage__column apartmentpage__column--visit">
-              <ApartmentVisitCard />
+              <ApartmentVisit />
             </div>
           </div>
         </>

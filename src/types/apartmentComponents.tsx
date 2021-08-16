@@ -47,6 +47,11 @@ export interface ApartmentOutdoorSpacesProps {
   outdoorSpaces: OutdoorSpace[];
 }
 
+// -- Routing --
+export interface ApartmentPageParamsProps {
+  id: string;
+}
+
 // -- Common --
 
 export interface AppBrandNavProps {
