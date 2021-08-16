@@ -1,15 +1,15 @@
-import { ApartmentsGallery } from "../../components/ApartmentsGallery";
 import { AppLoading } from "../../components/common/AppLoading";
+import { ApartmentsGallery } from "../../components/groups/ApartmentsGallery";
 import { AparmentsMap } from "../../components/maps/AparmentsMap";
 import { useApartments } from "../../hooks/useApartments";
 import "./ApartmentsPage.scss";
 
 export const ApartmentsPage = () => {
-  const { apartments, error, loading } = useApartments();
+  const { apartments, errorApartments, loadingApartments } = useApartments();
 
-  if (error !== null) return <p>There was an error</p>;
+  if (errorApartments !== null) return <p>There was an error</p>;
 
-  return loading ? (
+  return loadingApartments ? (
     <AppLoading />
   ) : (
     <div className="apartmentspage">

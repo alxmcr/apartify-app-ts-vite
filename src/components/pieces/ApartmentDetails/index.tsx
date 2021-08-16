@@ -4,7 +4,7 @@ import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood"
 import { useLocationState } from "../../../hooks/useLocationState";
 import { ApartmentDetailsProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { FeatureList } from "../../lists/FeatureList";
+import { FeatureList } from "../../groups/FeatureList";
 import { ApartmentBreadcrumbs } from "../ApartmentBreadcrumbs";
 import "./ApartmentDetails.scss";
 

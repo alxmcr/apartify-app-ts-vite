@@ -1,5 +1,5 @@
-import { FeatureListProps } from "../../types/apartmentComponents";
-import { FeatureIcon } from "../FeatureIcon";
+import { FeatureListProps } from "../../../types/apartmentComponents";
+import { FeatureIcon } from "../../pieces/FeatureIcon";
 import "./FeatureList.scss";
 
 export const FeatureList = ({ features = [] }: FeatureListProps) => {
@@ -12,9 +12,7 @@ export const FeatureList = ({ features = [] }: FeatureListProps) => {
     <ul className="features">
       {features.map((feature) => (
         <li className="features__item" key={feature?.fe_feature}>
-          {feature?.fe_is_card ? (
-            <FeatureIcon key={feature?.fe_feature} feature={feature} />
-          ) : null}
+          <FeatureIcon key={feature?.fe_feature} feature={feature} />
         </li>
       ))}
     </ul>

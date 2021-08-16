@@ -1,10 +1,18 @@
 import "./App.scss";
+import { BrowserRouter } from "react-router-dom";
+import { SwitchRoutesApp } from "./routing/SwitchRoutesApp";
+import { AppHeader } from "./components/common/AppHeader";
+import { AppFooter } from "./components/common/AppFooter";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <AppHeader />
+        <SwitchRoutesApp />
+        <AppFooter />
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -2,7 +2,7 @@ import { useHistory } from "react-router-dom";
 import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
 import { ApartmentCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { FeatureList } from "../../lists/FeatureList";
+import { FeatureList } from "../../groups/FeatureList";
 import { ApartmentAddress } from "../../pieces/ApartmentAddress";
 
 import "./ApartmentCard.scss";

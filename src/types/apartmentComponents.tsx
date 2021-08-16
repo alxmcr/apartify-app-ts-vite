@@ -61,6 +61,14 @@ export interface AparmentsGridProps {
   apartments: Apartment[];
 }
 
+export interface FeatureListProps {
+  features: Feature[];
+}
+
+export interface FeatureIconProps {
+  feature: Feature;
+}
+
 // -- Routing --
 export interface ApartmentPageParamsProps {
   id: string;

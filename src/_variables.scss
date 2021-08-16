@@ -1,0 +1,33 @@
+$primary: #ff5a5a;
+$primary-hue-degree: 145deg;
+$primary-hue: adjust-hue($primary, $primary-hue-degree);
+$primary-soft: #2c6ecf;
+$secondary: #fff;
+$bg-body: #ffffff;
+$bg-body-gradient: linear-gradient(to right, $primary, $secondary);
+$font-family-headings: "Raleway", sans-serif;
+$font-family-body: "Open Sans", sans-serif;
+$filter-images: invert(43%) sepia(41%) saturate(4158%) hue-rotate(146deg) brightness(101%) contrast(101%);
+$gap-small: 0.5rem;
+$gap-basic: 1rem;
+$height-image-card: 10.8rem;
+$height-gallery-photos: ($height-image-card * 2) + (3*$gap-small);
+$height-cover: $height-gallery-photos - (2*$gap-small);
+$height-visit-card-small: 14rem;
+$height-logo: 3.5rem;
+$height-logo-footer: 5rem;
+$height-footer: 15rem;
+$bg-footer: #1a1a1a;
+$bg-footer-soft: #2a1944;
+$color-heading-footer: $primary;
+$color-text-footer: invert($bg-footer);
+
+/* Loading */
+$min-height-balls: 6rem;
+$width-balls: 6rem;
+$ball-height: 0.75rem;
+$ball-width: 0.75rem;
+$ball-gap: 2rem;
+$ball-padding: $ball-height;
+$ball-top: $ball-padding;
+$ball-color: $primary;
