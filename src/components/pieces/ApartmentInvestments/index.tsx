@@ -11,10 +11,10 @@ export const ApartmentInvestments = ({
         {investments.map((investment) => (
           <div
             className="apartmentinvestments__investment"
-            key={investment?.in_investement}
+            key={investment?.in_investment}
           >
             <img
-              src={investment.in_icon}
+              src={investment.in_icon_url}
               alt={investment.in_name}
               className="apartmentinvestments__icon"
             />
@@ -22,9 +22,7 @@ export const ApartmentInvestments = ({
               <span className="apartmentinvestments__label">
                 {investment?.in_name}:
               </span>
-              <span className="apartmentinvestments__value">
-                {investment?.in_value}
-              </span>
+              <span className="apartmentinvestments__value">0</span>
             </p>
           </div>
         ))}

@@ -2,6 +2,7 @@ import {
   Apartment,
   Feature,
   Flat,
+  Investment,
   Neighborhood,
   State,
 } from "./apartmentTypes";
@@ -35,4 +36,8 @@ export interface ApartmentFeaturesProps {
 
 export interface ApartmentFlatImageCardProps {
   flat: Flat;
+}
+
+export interface ApartmentInvestmentsProps {
+  investments: Investment[];
 }
