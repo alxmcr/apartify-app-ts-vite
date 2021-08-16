@@ -1,5 +1,5 @@
-import { AparmentsGridProps } from "../../types/apartmentComponents"
-import { ApartmentCard } from "../cards/ApartmentCard"
+import { AparmentsGridProps } from "../../../types/apartmentComponents"
+import { ApartmentCard } from "../../cards/ApartmentCard"
 import "./AparmentsGrid.scss"
 
 export const AparmentsGrid = ({ apartments = [] }: AparmentsGridProps) => {
