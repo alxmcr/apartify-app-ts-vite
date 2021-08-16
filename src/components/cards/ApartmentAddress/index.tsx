@@ -1,6 +1,9 @@
+import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
 import { ApartmentAddressProps } from "../../../types/apartmentComponents";
 
 export const ApartmentAddress = ({ apartment }: ApartmentAddressProps) => {
+  const {} = useLocationNeighborhood(apartment.ne_neighborhood);
+
   return (
     <p className="address">
       <span className="address__neighborhood">

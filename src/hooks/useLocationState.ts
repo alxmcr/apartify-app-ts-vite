@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { State } from "../types/apartmentTypes";
 
-export const useLocationState = (id = '') => {
+export const useLocationState = (id = 0) => {
     const [locationState, setLocationState] = useState<State>()
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(false);

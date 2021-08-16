@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { GeoApartment } from "../types/apartmentTypes";
 
-export const useGeoApartment = (id = '') => {
+export const useGeoApartment = (id = 0) => {
     const [geoApartment, setGeoApartment] = useState<GeoApartment>()
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(false);
