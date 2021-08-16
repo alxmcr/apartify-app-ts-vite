@@ -1,0 +1,20 @@
+@import "../../../variables";
+
+.apartmentdetailscard {
+    border-bottom: 1px solid rgb(187, 187, 187);
+    &__link {
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            color: $primary;
+            border-bottom: 1px solid $primary;
+        }
+        &:active,
+        &:link {
+            color: #000;
+        }
+    }
+    &__title {
+        font-weight: 800;
+    }
+}

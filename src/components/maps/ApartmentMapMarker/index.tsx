@@ -1,19 +1,19 @@
 import mapboxgl, { MapboxOptions } from 'mapbox-gl';
 import { useEffect, useRef } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import './MapMarker.scss'
-import { MapMarkerProps } from '../../types/apartmentComponents';
+import './ApartmentMapMarker.scss'
+import { ApartmentMapMarkerProps } from '../../../types/apartmentComponents';
 
-export const MapMarker = ({
+export const ApartmentMapMarker = ({
     latitude = 19.451119091716365,
     longitude = -99.15295438729619,
     levelZoom = 15
-}: MapMarkerProps) => {
+}: ApartmentMapMarkerProps) => {
     const mapContainerRef = useRef(null);
 
     useEffect(() => {
         const mapOptions: MapboxOptions = {
-            accessToken: import.meta.env.VITE_APP_ACCESS_TOKEN_MAPBOX || '',
+            accessToken: import.meta.env.VITE_APP_ACCESS_TOKEN_MAPBOX,
             container: 'map_marker',
             style: 'mapbox://styles/mapbox/streets-v11?optimize=true',
             center: [longitude, latitude],

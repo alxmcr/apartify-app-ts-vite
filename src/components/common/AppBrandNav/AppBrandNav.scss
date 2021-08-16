@@ -1,0 +1,56 @@
+@import '../../../variables';
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.appbrandnav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+  &__brand {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  &__button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  &__icon {
+    height: 2.5rem;
+  }
+  &__link {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+  &__logo {
+    height: $height-logo;
+  }
+  &__name {
+    color: $primary;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .appbrandnav {
+    &__icons {
+      display: none;
+    }
+  }
+}

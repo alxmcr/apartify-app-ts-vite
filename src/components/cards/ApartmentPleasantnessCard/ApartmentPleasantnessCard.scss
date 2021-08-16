@@ -1,0 +1,27 @@
+.apartmentpleasantnesscard {
+    &__pleasantness {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.9rem;
+        gap: 0.5rem;
+    }
+    &__pleasantnesses {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    &__value {
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 745px) {
+    .apartmentpleasantnesscard {
+        &__pleasantnesses {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem 2rem;
+            padding: 1rem 0;
+        }
+    }
+}

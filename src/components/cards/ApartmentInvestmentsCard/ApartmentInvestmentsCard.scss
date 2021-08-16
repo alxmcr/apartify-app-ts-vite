@@ -1,0 +1,45 @@
+.apartmentinvestmentscard {
+  &__investments {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  &__investment {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+    height: 4rem;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    gap: 0.2rem;
+    margin: 0;
+  }
+  &__icon {
+    height: 2rem;
+  }
+  &__label {
+    margin: 0;
+  }
+  &__value {
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 745px) {
+  .apartmentinvestmentscard {
+    &__investments {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem 2rem;
+    }
+    &__investment {
+      height: 3rem;
+    }
+  }
+}

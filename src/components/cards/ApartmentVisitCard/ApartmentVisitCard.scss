@@ -1,0 +1,70 @@
+@import "../../../variables";
+
+.apartmentvisitcard {
+  background-color: #fff;
+  bottom: 0;
+  height: $height-visit-card-small;
+  left: 0;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  width: 100%;
+  &__button {
+    appearance: none;
+    background-color: $primary;
+    border: none;
+    color: $secondary;
+    font-weight: 700;
+    padding: 1rem;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 30px 30px -10px rgb(0 0 0 / 40%);
+      transform: scale(1.05);
+    }
+  }
+  &__cost {
+    margin: 0;
+  }
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  &__invitation {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  &__label {
+    color: gray;
+    display: block;
+    font-size: 0.75rem;
+  }
+  &__message {
+    color: gray;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  &__value {
+    color: $primary;
+    display: block;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .apartmentvisitcard {
+    background-color: #fff;
+    height: 18rem;
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+}

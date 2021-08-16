@@ -1,11 +1,9 @@
-import { GeoCoordinates } from "./apartmentTypes";
+import { Apartment } from "./apartmentTypes";
 
-export interface MapMarkerProps {
-  latitude: number;
-  longitude: number;
-  levelZoom: number;
+export interface ApartmentCardProps {
+  apartment: Apartment;
 }
 
-export interface GeoCoordinatesProps {
-  geoCoordinates: GeoCoordinates;
+export interface ApartmentAddressProps {
+  apartment: Apartment;
 }

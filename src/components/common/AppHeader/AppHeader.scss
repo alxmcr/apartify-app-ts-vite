@@ -1,0 +1,15 @@
+@import "../../../variables";
+
+.appheader {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .appheader {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0.5rem;
+    height: $height-logo + 3 * 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
