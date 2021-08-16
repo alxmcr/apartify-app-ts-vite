@@ -1,5 +1,5 @@
 {
-  "name": "template-react-ts-vite-mapbox",
+  "name": "apartify-app-ts-vite",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
