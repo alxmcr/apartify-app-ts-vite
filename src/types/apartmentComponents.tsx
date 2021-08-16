@@ -5,6 +5,7 @@ import {
   Investment,
   Neighborhood,
   OutdoorSpace,
+  Photo,
   State,
 } from "./apartmentTypes";
 
@@ -45,6 +46,11 @@ export interface ApartmentInvestmentsProps {
 
 export interface ApartmentOutdoorSpacesProps {
   outdoorSpaces: OutdoorSpace[];
+}
+
+export interface ApartmentImagesProps {
+  cover: Photo | null;
+  images: Photo[] | null;
 }
 
 // -- Routing --
