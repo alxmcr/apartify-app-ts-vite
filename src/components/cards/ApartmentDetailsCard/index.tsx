@@ -30,7 +30,7 @@ export const ApartmentDetailsCard = ({
           {`${apartment?.ap_address?.ap_state}`}
         </span>
       </h1>
-      <FeatureList features={apartment?.ap_features} />
+      <FeatureList features={apartment?.features} />
     </div>
   );
 };

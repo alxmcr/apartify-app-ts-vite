@@ -1,6 +1,6 @@
-import "./BallsLoader.scss";
+import "./AppCircleLoader.scss";
 
-export const BallsLoader = () => {
+export const AppCircleLoader = () => {
   return (
     <section className="balls">
       <span className="balls__ball balls__ball--one"></span>

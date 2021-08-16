@@ -9,3 +9,11 @@ export interface ApartmentAddressProps {
   ap_ext_number: string;
   neighborhood: Neighborhood | null;
 }
+
+export interface ApartmentDescriptionCardProps {
+  description: string;
+}
+
+export interface ApartmentDetailsCardProps {
+  apartment: Apartment;
+}

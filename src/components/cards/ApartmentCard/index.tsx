@@ -1,8 +1,8 @@
 import { useHistory } from "react-router-dom";
 import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
 import { ApartmentCardProps } from "../../../types/apartmentComponents";
+import { AppCircleLoader } from "../../common/AppCircleLoader";
 import { FeatureList } from "../../lists/FeatureList";
-import { BallsLoader } from "../../loaders/BallsLoader";
 import { ApartmentAddress } from "../ApartmentAddress";
 import "./ApartmentCard.scss";
 
@@ -14,7 +14,7 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
   const redirectToApartPage = () =>
     history.push(`/apartments/${apartment.ap_apartment}`);
 
-  if (loading) return <BallsLoader />;
+  if (loading) return <AppCircleLoader />;
   if (error !== null) return <p>There was an error with this apartment.</p>;
 
   return (
