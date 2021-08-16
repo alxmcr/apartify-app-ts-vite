@@ -1,9 +1,9 @@
 @import "../../../variables";
 
-.apartmentvisitcard {
+.apartmentvisit {
   background-color: #fff;
   bottom: 0;
-  height: $height-visit-card-small;
+  height: $height-visit--small;
   left: 0;
   padding: 0.5rem 1rem;
   position: fixed;
@@ -59,7 +59,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .apartmentvisitcard {
+  .apartmentvisit {
     background-color: #fff;
     height: 18rem;
     padding: 0.5rem 1rem;
