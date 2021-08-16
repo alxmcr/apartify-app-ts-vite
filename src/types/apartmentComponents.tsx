@@ -46,3 +46,10 @@ export interface ApartmentInvestmentsProps {
 export interface ApartmentOutdoorSpacesProps {
   outdoorSpaces: OutdoorSpace[];
 }
+
+// -- Common --
+
+export interface AppBrandNavProps {
+  showMenu: boolean;
+  setShowMenu: (showMenu: boolean) => void;
+}
