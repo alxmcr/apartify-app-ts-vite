@@ -3,19 +3,20 @@ import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood"
 import { ApartmentCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import { FeatureList } from "../../lists/FeatureList";
-import { ApartmentAddress } from "../ApartmentAddress";
+import { ApartmentAddress } from "../../pieces/ApartmentAddress";
+
 import "./ApartmentCard.scss";
 
 export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
-  const { neighborhood, loading, error } = useLocationNeighborhood(
-    apartment.ne_neighborhood
-  );
+  const { neighborhood, loadingNeighborhood, errorNeighborhood } =
+    useLocationNeighborhood(apartment.ne_neighborhood);
   const history = useHistory();
   const redirectToApartPage = () =>
     history.push(`/apartments/${apartment.ap_apartment}`);
 
-  if (loading) return <AppCircleLoader />;
-  if (error !== null) return <p>There was an error with this apartment.</p>;
+  if (loadingNeighborhood) return <AppCircleLoader />;
+  if (errorNeighborhood !== null)
+    return <p>There was an error with this neighborhood.</p>;
 
   return (
     <div
