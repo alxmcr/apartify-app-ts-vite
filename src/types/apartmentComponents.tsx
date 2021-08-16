@@ -1,4 +1,4 @@
-import { Apartment, Neighborhood, State } from "./apartmentTypes";
+import { Apartment, Feature, Neighborhood, State } from "./apartmentTypes";
 
 export interface ApartmentCardProps {
   apartment: Apartment;
@@ -21,4 +21,8 @@ export interface ApartmentDetailsProps {
 export interface ApartmentBreadcrumbsProps {
   state: State | null;
   neighborhood: Neighborhood | null;
+}
+
+export interface ApartmentFeaturesProps {
+  features: Feature[];
 }

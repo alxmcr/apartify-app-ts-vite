@@ -17,7 +17,7 @@ export const ApartmentFeatures = ({
               {feature?.fe_name}:
             </span>
             <span className="apartmentfeatures__value">
-              {feature?.fe_value}
+              0
             </span>
           </div>
         ))}
