@@ -1,3 +1,4 @@
+import { AppError } from "../../components/common/AppError";
 import { AppLoading } from "../../components/common/AppLoading";
 import { ApartmentsGallery } from "../../components/groups/ApartmentsGallery";
 import { AparmentsMap } from "../../components/maps/AparmentsMap";
@@ -7,7 +8,8 @@ import "./ApartmentsPage.scss";
 export const ApartmentsPage = () => {
   const { apartments, errorApartments, loadingApartments } = useApartments();
 
-  if (errorApartments !== null) return <p>There was an error</p>;
+  if (errorApartments !== null)
+    return <AppError errorMessage="There was an error." />;
 
   return loadingApartments ? (
     <AppLoading />

@@ -81,6 +81,10 @@ export interface AppBrandNavProps {
   setShowMenu: (showMenu: boolean) => void;
 }
 
+export interface AppErrorProps {
+  errorMessage: string;
+}
+
 export interface AppNavProps {
   showMenu: boolean;
 }
