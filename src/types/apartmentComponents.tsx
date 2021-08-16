@@ -53,3 +53,7 @@ export interface AppBrandNavProps {
   showMenu: boolean;
   setShowMenu: (showMenu: boolean) => void;
 }
+
+export interface AppNavProps {
+  showMenu: boolean;
+}

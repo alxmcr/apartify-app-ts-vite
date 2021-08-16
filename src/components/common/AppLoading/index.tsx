@@ -1,10 +1,10 @@
-import { BallsLoader } from "../../BallsLoader";
+import { AppCircleLoader } from "../AppCircleLoader";
 import "./AppLoading.scss";
 
 export const AppLoading = () => {
   return (
     <section className="loading">
-      <BallsLoader />
+      <AppCircleLoader />
     </section>
   );
 };
