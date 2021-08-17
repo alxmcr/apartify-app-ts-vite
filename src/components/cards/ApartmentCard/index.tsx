@@ -14,8 +14,6 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
   const redirectToApartPage = () =>
     history.push(`/apartments/${apartment.ap_apartment}`);
 
-  console.log({ loadingNeighborhood });
-
   if (loadingNeighborhood) return <AppCircleLoader />;
   if (errorNeighborhood !== null)
     return <p>There was an error with this neighborhood.</p>;
