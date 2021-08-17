@@ -1,7 +1,7 @@
 import { FeatureIconProps } from "../../../types/apartmentComponents";
 import "./FeatureIcon.scss";
 
-export const FeatureIcon = ({ feature }: FeatureIconProps) => {
+export const FeatureIcon = ({ ap_apartment, feature }: FeatureIconProps) => {
   return (
     <>
       <img

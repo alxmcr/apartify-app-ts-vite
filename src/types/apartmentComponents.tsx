@@ -62,10 +62,12 @@ export interface AparmentsGridProps {
 }
 
 export interface FeatureListProps {
+  ap_apartment: number;
   features: Feature[];
 }
 
 export interface FeatureIconProps {
+  ap_apartment: number;
   feature: Feature;
 }
 

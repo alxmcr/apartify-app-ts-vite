@@ -50,7 +50,10 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
             neighborhood={neighborhood}
           />
         ) : null}
-        <FeatureList features={apartment?.features} />
+        <FeatureList
+          ap_apartment={apartment.ap_apartment}
+          features={apartment?.features}
+        />
       </div>
     </div>
   );
