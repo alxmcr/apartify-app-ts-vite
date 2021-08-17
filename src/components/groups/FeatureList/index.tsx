@@ -12,7 +12,9 @@ export const FeatureList = ({ features = [] }: FeatureListProps) => {
     <ul className="features">
       {features.map((feature) => (
         <li className="features__item" key={feature?.fe_feature}>
-          <FeatureIcon key={feature?.fe_feature} feature={feature} />
+          {feature?.fe_is_in_card ? (
+            <FeatureIcon key={feature?.fe_feature} feature={feature} />
+          ) : null}
         </li>
       ))}
     </ul>

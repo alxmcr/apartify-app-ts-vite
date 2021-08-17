@@ -44,6 +44,7 @@ export interface Feature {
   fe_name: string;
   fe_icon_url: string;
   fe_icon_color: string;
+  fe_is_in_card: boolean;
 }
 
 export interface OutdoorSpace {
@@ -95,8 +96,8 @@ export interface Photo {
 }
 
 export interface Flat {
-  fl_flat: number
-  fl_url: string
-  fl_alt: string
-  ap_apartment: number
+  fl_flat: number;
+  fl_url: string;
+  fl_alt: string;
+  ap_apartment: number;
 }
