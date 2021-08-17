@@ -46,7 +46,7 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
             {apartment?.ap_cost_offer}
           </span>
           <span className="apartmentcard__cost--list">
-            {apartment?.ap_cost_offer}
+            {apartment?.ap_cost_list}
           </span>
         </p>
         {!loadingNeighborhood ? (
