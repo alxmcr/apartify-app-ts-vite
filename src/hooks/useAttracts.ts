@@ -11,18 +11,29 @@ export const useAttracts = (ap_apartment = 0, fe_feature = 0) => {
     const url = `${baseURL}/${versionAPI}/${resource}` || ''
 
     useEffect(() => {
+        // Abort fetch
+        let abortController = new AbortController();
+        const { signal } = abortController;
+
         setLoadingAttract(true)
-        fetch(url)
+        fetch(url, { signal })
             .then(response => response.json())
             .then(data => {
                 console.log({ ap_apartment, fe_feature })
                 setAttract(data)
             })
             .catch(error => {
-                setErrorAttract(error)
+                if (error.name !== 'AbortError') {
+                    setErrorAttract(error)
+                }
             })
             .finally(() => setLoadingAttract(false))
-    }, [url])
+
+        // Clean up
+        return function cancel() {
+            abortController?.abort();
+        };
+    }, [url, ap_apartment, fe_feature])
 
     return { attract, loadingAttract, errorAttract }
 }

@@ -11,16 +11,27 @@ export const useApartments = () => {
     const url = `${baseURL}/${versionAPI}/${resource}` || ''
 
     useEffect(() => {
+        // Abort fetch
+        let abortController = new AbortController();
+        const { signal } = abortController;
+
         setLoadingApartments(true)
-        fetch(url)
+        fetch(url, { signal })
             .then(response => response.json())
             .then(data => {
                 setApartments(data)
             })
             .catch(error => {
-                setErrorApartments(error)
+                if (error.name !== 'AbortError') {
+                    setErrorApartments(error)
+                }
             })
             .finally(() => setLoadingApartments(false))
+
+        // Clean up
+        return function cancel() {
+            abortController?.abort();
+        };
     }, [url])
 
     return { apartments, loadingApartments, errorApartments }

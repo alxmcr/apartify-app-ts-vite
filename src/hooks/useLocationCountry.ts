@@ -11,16 +11,27 @@ export const useLocationCountry = (id = 0) => {
     const url = `${baseURL}/${versionAPI}/${resource}/${id}` || ''
 
     useEffect(() => {
+        // Abort fetch
+        let abortController = new AbortController();
+        const { signal } = abortController;
+
         setLoading(true)
-        fetch(url)
+        fetch(url, { signal })
             .then(response => response.json())
             .then(data => {
                 setCountry(data)
             })
             .catch(error => {
-                setError(error)
+                if (error.name !== 'AbortError') {
+                    setError(error)
+                }
             })
             .finally(() => setLoading(false))
+
+        // Clean up
+        return function cancel() {
+            abortController?.abort();
+        };
     }, [url])
 
     return { country, loading, error }

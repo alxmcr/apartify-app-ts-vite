@@ -11,16 +11,27 @@ export const useLocationState = (id = 0) => {
     const url = `${baseURL}/${versionAPI}/${resource}/${id}` || ''
 
     useEffect(() => {
+        // Abort fetch
+        let abortController = new AbortController();
+        const { signal } = abortController;
+
         setLoadingLocationState(true)
-        fetch(url)
+        fetch(url, { signal })
             .then(response => response.json())
             .then(data => {
                 setLocationState(data)
             })
             .catch(error => {
-                setErrorLocationState(error)
+                if (error.name !== 'AbortError') {
+                    setErrorLocationState(error)
+                }
             })
             .finally(() => setLoadingLocationState(false))
+            
+        // Clean up
+        return function cancel() {
+            abortController?.abort();
+        };
     }, [url])
 
     return { locationState, loadingLocationState, errorLocationState }

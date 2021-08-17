@@ -13,8 +13,6 @@ export const FeatureIcon = ({ ap_apartment, feature }: FeatureIconProps) => {
   if (errorAttract !== null)
     return <p>There was an error with this feature icon.</p>;
 
-  console.log({ attract });
-
   return (
     <>
       <img
