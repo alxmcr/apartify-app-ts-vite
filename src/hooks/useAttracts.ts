@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import { appHttp } from "../helpers/appHttp";
 import { Attract } from "../types/apartmentTypes";
 
-export const useAttracts = (ap_apartment = 0, fe_feature = 0) => {
-    const [attract, setAttract] = useState<Attract | null | undefined>(null)
-    const [errorAttract, setErrorAttract] = useState(null)
-    const [loadingAttract, setLoadingAttract] = useState(false);
+export const useAttracts = (ap_apartment = 0) => {
+    const [attracts, setAttracts] = useState<Attract[]>([])
+    const [errorAttracts, setErrorAttracts] = useState(null)
+    const [loadingAttracts, setLoadingAttracts] = useState(false);
     const versionAPI = import.meta.env.VITE_APP_API_VERSION;
     const baseURL = import.meta.env.VITE_APP_API_BASE_URL;
     const resource = import.meta.env.VITE_APP_API_RESOURCE_ATTRACTS;
@@ -16,28 +16,27 @@ export const useAttracts = (ap_apartment = 0, fe_feature = 0) => {
         let abortController = new AbortController();
         const { signal } = abortController;
 
-        setLoadingAttract(true)
+        setLoadingAttracts(true)
 
         appHttp<Attract[]>(url, signal)
             .then(data => {
-                const firstResult = data?.find(attractItem => {
-                    return attractItem?.ap_apartment === ap_apartment && attractItem?.fe_feature === fe_feature
+                const featuresByApartment = data?.filter(attractItem => {
+                    return attractItem?.ap_apartment === ap_apartment
                 })
-
-                setAttract(firstResult)
+                setAttracts(featuresByApartment)
             })
             .catch(error => {
                 if (error.name !== 'AbortError') {
-                    setErrorAttract(error)
+                    setErrorAttracts(error)
                 }
             })
-            .finally(() => setLoadingAttract(false))
+            .finally(() => setLoadingAttracts(false))
 
         // Clean up
         return function cancel() {
             abortController?.abort();
         };
-    }, [url, ap_apartment, fe_feature])
+    }, [url, ap_apartment])
 
-    return { attract, loadingAttract, errorAttract }
+    return { attracts, loadingAttracts, errorAttracts }
 }
