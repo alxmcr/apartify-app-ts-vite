@@ -17,4 +17,9 @@ interface ImportMetaEnv {
     VITE_APP_API_RESOURCE_GEO: string
     VITE_APP_API_RESOURCE_SEARCH_FAKE: string
     VITE_APP_API_RESOURCE_SEARCH_REAL: string
+    // -- Relationships --
+    VITE_APP_API_RESOURCE_ATTRACTS: string
+    VITE_APP_API_RESOURCE_OUTDOORS: string
+    VITE_APP_API_RESOURCE_INVESTS: string
+
 }

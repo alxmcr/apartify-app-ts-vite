@@ -101,3 +101,12 @@ export interface Flat {
   fl_alt: string;
   ap_apartment: number;
 }
+
+// -- Relationships --
+export interface Attract {
+  ap_apartment: number;
+  fe_feature: number;
+  att_value: string;
+  att_is_visible: boolean;
+  att_is_card: boolean;
+}
