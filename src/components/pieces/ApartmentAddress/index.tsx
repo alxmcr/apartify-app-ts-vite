@@ -5,6 +5,7 @@ export const ApartmentAddress = ({
   ap_ext_number = "",
   neighborhood,
 }: ApartmentAddressProps) => {
+  console.log("ApartmentAddress - neighborhood",  { neighborhood });
   return (
     <p className="address">
       {neighborhood !== null ? (

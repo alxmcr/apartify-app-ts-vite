@@ -7,7 +7,7 @@ export const useLocationNeighborhood = (id = 0) => {
     const [loadingNeighborhood, setLoadingNeighborhood] = useState(false);
     const versionAPI = import.meta.env.VITE_APP_API_VERSION;
     const baseURL = import.meta.env.VITE_APP_API_BASE_URL;
-    const resource = import.meta.env.VITE_APP_API_RESOURCE_COUNTRIES;
+    const resource = import.meta.env.VITE_APP_API_RESOURCE_NEIGHBORHOOD;
     const url = `${baseURL}/${versionAPI}/${resource}/${id}` || ''
 
     useEffect(() => {
