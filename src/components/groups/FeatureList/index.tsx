@@ -1,25 +1,25 @@
+import { useAttracts } from "../../../hooks/useAttracts";
 import { FeatureListProps } from "../../../types/apartmentComponents";
-import { FeatureIcon } from "../../pieces/FeatureIcon";
+import { AppCircleLoader } from "../../common/AppCircleLoader";
+import { ApartmentAttract } from "../../pieces/ApartmentAttract";
 import "./FeatureList.scss";
 
-export const FeatureList = ({
-  ap_apartment = 0,
-  features = [],
-}: FeatureListProps) => {
-  if (features?.length === 0)
-    return (
-      <p className="features__message">There is not an feature registered.</p>
-    );
+export const FeatureList = ({ ap_apartment = 0 }: FeatureListProps) => {
+  const { attracts, errorAttracts, loadingAttracts } =
+    useAttracts(ap_apartment);
+
+  if (loadingAttracts) return <AppCircleLoader />;
+  if (errorAttracts !== null)
+    return <p>There was an error with this feature list.</p>;
 
   return (
     <ul className="features">
-      {features.map((feature) => (
-        <li className="features__item" key={feature?.fe_feature}>
-          {feature?.fe_is_in_card ? (
-            <FeatureIcon
-              ap_apartment={ap_apartment}
-              key={feature?.fe_feature}
-              feature={feature}
+      {attracts.map((attract) => (
+        <li className="features__item" key={attract?.fe_feature}>
+          {attract?.att_is_card ? (
+            <ApartmentAttract
+              fe_feature={attract?.fe_feature}
+              att_value={attract?.att_value}
             />
           ) : null}
         </li>

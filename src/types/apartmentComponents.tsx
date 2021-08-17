@@ -63,7 +63,11 @@ export interface AparmentsGridProps {
 
 export interface FeatureListProps {
   ap_apartment: number;
-  features: Feature[];
+}
+
+export interface ApartmentAttractProps {
+  fe_feature: number;
+  att_value: string;
 }
 
 export interface FeatureIconProps {
