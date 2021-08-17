@@ -1,8 +1,9 @@
 import { useHistory } from "react-router-dom";
+import { useAttracts } from "../../../hooks/useAttracts";
 import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
 import { ApartmentCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { FeatureList } from "../../groups/FeatureList";
+import { ApartmentAttractList } from "../../groups/ApartmentAttractList";
 import { ApartmentAddress } from "../../pieces/ApartmentAddress";
 
 import "./ApartmentCard.scss";
@@ -10,11 +11,18 @@ import "./ApartmentCard.scss";
 export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
   const { neighborhood, loadingNeighborhood, errorNeighborhood } =
     useLocationNeighborhood(apartment.ne_neighborhood);
+  const { attracts, errorAttracts, loadingAttracts } = useAttracts(
+    apartment?.ap_apartment
+  );
+
   const history = useHistory();
   const redirectToApartPage = () =>
     history.push(`/apartments/${apartment.ap_apartment}`);
 
   if (loadingNeighborhood) return <AppCircleLoader />;
+  if (loadingAttracts) return <AppCircleLoader />;
+  if (errorAttracts !== null)
+    return <p>There was an error with this feature list.</p>;
   if (errorNeighborhood !== null)
     return <p>There was an error with this neighborhood.</p>;
 
@@ -48,9 +56,7 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
             neighborhood={neighborhood}
           />
         ) : null}
-        <FeatureList
-          ap_apartment={apartment.ap_apartment}
-        />
+        <ApartmentAttractList attracts={attracts} />
       </div>
     </div>
   );

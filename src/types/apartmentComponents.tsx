@@ -1,5 +1,6 @@
 import {
   Apartment,
+  Attract,
   Feature,
   Flat,
   Investment,
@@ -68,6 +69,10 @@ export interface FeatureListProps {
 export interface ApartmentAttractProps {
   fe_feature: number;
   att_value: string;
+}
+
+export interface ApartmentAttractListProps {
+  attracts: Attract[];
 }
 
 export interface FeatureIconProps {
