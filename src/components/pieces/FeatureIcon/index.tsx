@@ -20,7 +20,7 @@ export const FeatureIcon = ({ ap_apartment, feature }: FeatureIconProps) => {
         alt={feature?.fe_name}
         className="featureicon"
       />
-      <span className="featureicon__name">0</span>
+      <span className="featureicon__name">{attract?.att_value}</span>
     </>
   );
 };
