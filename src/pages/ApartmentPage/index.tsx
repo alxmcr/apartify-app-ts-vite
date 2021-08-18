@@ -1,8 +1,12 @@
 import { useParams } from "react-router-dom";
+import { FeaturesCard } from "../../components/cards/FeaturesCard";
+import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
+import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
 import { AppLoading } from "../../components/common/AppLoading";
 import { ApartmentOutdoorList } from "../../components/lists/ApartmentOutdoorList";
 import { ApartmentDescription } from "../../components/pieces/ApartmentDescription";
 import { ApartmentDetails } from "../../components/pieces/ApartmentDetails";
+import { ApartmentFeatures } from "../../components/pieces/ApartmentFeatures";
 import { ApartmentOutdoorSpace } from "../../components/pieces/ApartmentOutdoorSpace";
 import { ApartmentOutdoor } from "../../components/relationships/ApartmentOutdoor";
 import { useApartment } from "../../hooks/useApartment";
@@ -36,17 +40,14 @@ export const ApartmentPage = () => {
                   <ApartmentDescription
                     description={apartment?.ap_description}
                   />
-                  {/* <ApartmentFeatures features={apartment?.features} /> */}
-
-                  <ApartmentOutdoorList 
-                    outdoors = {}
-                  />
+                  <FeaturesCard ap_apartment={apartment?.ap_apartment} />
+                  <OutdoorSpacesCard ap_apartment={apartment?.ap_apartment} />
                   {/* <ApartmentMapMarker
                     coordinates={apartment?.ap_coordinates}
                   /> */}
-                  {/* <ApartmentInvestments investments={apartment?.investments} /> */}
+                  <InvestmentsCard ap_apartment={apartment?.ap_apartment} />
                   {/* <ApartmentFlatImageCard flat={apartment.} /> */}
-                </Apartmentout>
+                </>
               ) : null}
             </div>
             <div className="apartmentpage__column apartmentpage__column--visit">
