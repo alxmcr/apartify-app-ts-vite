@@ -1,6 +1,12 @@
 @import "../../../variables";
 
 .attracticon {
-  height: 1.5rem;
-  filter: $filter-images;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  &__icon {
+    height: 1.5rem;
+    filter: $filter-images;
+  }
 }

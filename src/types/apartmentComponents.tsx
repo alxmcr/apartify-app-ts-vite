@@ -66,6 +66,11 @@ export interface ApartmentPageParamsProps {
   id: string;
 }
 
+// -- Groups --
+export interface ApartmentAttractIconsGroupProps {
+  ap_apartment: number;
+}
+
 // -- Cards --
 export interface FeaturesCardProps {
   ap_apartment: number;

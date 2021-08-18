@@ -3,28 +3,23 @@ import { useAttracts } from "../../../hooks/useAttracts";
 import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
 import { ApartmentCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
+import { ApartmentAttractIconsGroup } from "../../groups/ApartmentAttractIconsGroup";
 import { ApartmentAttractIconsList } from "../../lists/ApartmentAttractIconsList";
 import { ApartmentAddress } from "../../pieces/ApartmentAddress";
 
 import "./ApartmentCard.scss";
 
 export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
+  const history = useHistory();
   const { neighborhood, loadingNeighborhood, errorNeighborhood } =
     useLocationNeighborhood(apartment.ne_neighborhood);
-  const { attracts, errorAttracts, loadingAttracts } = useAttracts(
-    apartment?.ap_apartment
-  );
 
-  const history = useHistory();
   const redirectToApartPage = () =>
     history.push(`/apartments/${apartment.ap_apartment}`);
 
   if (loadingNeighborhood) return <AppCircleLoader />;
-  if (loadingAttracts) return <AppCircleLoader />;
   if (errorNeighborhood !== null)
     return <p>There was an error with this neighborhood.</p>;
-  if (errorAttracts !== null)
-    return <p>There was an error with this feature list.</p>;
 
   return (
     <div
@@ -56,7 +51,7 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
             neighborhood={neighborhood}
           />
         ) : null}
-        <ApartmentAttractIconsList attracts={attracts} />
+        <ApartmentAttractIconsGroup ap_apartment={apartment?.ap_apartment} />
       </div>
     </div>
   );
