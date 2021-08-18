@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { AddressCard } from "../../components/cards/AddressCard";
 import { FeaturesCard } from "../../components/cards/FeaturesCard";
 import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
 import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
@@ -37,17 +38,7 @@ export const ApartmentPage = () => {
             <div className="apartmentpage__column apartmentpage__column--details">
               {apartment !== undefined ? (
                 <>
-                  <ApartmentBreadcrumbs
-                    ne_neighborhood={apartment?.ne_neighborhood}
-                    st_state={apartment?.st_state}
-                  />
-                  <ApartmentDetails
-                    ap_street_name={apartment?.ap_street_name}
-                    ap_ext_number={apartment?.ap_ext_number}
-                    ci_city={apartment?.ci_city}
-                    ne_neighborhood={apartment?.ne_neighborhood}
-                    st_state={apartment?.st_state}
-                  />
+                  <AddressCard apartment={apartment} />
                   <ApartmentDescription
                     description={apartment?.ap_description}
                   />

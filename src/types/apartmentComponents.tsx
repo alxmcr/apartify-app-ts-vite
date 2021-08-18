@@ -1,6 +1,7 @@
 import {
   Apartment,
   Attract,
+  City,
   Feature,
   Flat,
   Invest,
@@ -78,18 +79,22 @@ export interface OutdoorSpacesCardProps {
   ap_apartment: number;
 }
 
+export interface AddressCardProps {
+  apartment: Apartment;
+}
+
 // -- Pieces --
 export interface ApartmentBreadcrumbsProps {
-  ne_neighborhood: number;
-  st_state: number;
+  neighborhood: Neighborhood | null;
+  locationState: State | null;
 }
 
 export interface ApartmentDetailsProps {
   ap_street_name: string;
   ap_ext_number: string;
-  ne_neighborhood: number;
-  st_state: number;
-  ci_city: number;
+  neighborhood: Neighborhood | null;
+  locationState: State | null;
+  locationCity: City | null;
 }
 
 export interface ApartmentFeatureProps {
