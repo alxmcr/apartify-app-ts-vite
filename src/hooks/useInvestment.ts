@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { appHttp } from "../helpers/appHttp";
-import { Feature } from "../types/apartmentTypes";
+import { Investment } from "../types/apartmentTypes";
 
 export const useInvestment = (in_investment = 0) => {
-    const [feature, setFeature] = useState<Feature | null>(null)
-    const [errorFeature, setErrorFeature] = useState(null)
-    const [loadingFeature, setLoadingFeature] = useState(false);
+    const [investment, setInvestment] = useState<Investment | null>(null)
+    const [errorInvestment, setErrorInvestment] = useState(null)
+    const [loadingInvestment, setLoadingInvestment] = useState(false);
     const versionAPI = import.meta.env.VITE_APP_API_VERSION;
     const baseURL = import.meta.env.VITE_APP_API_BASE_URL;
     const resource = import.meta.env.VITE_APP_API_RESOURCE_INVESTMENTS;
@@ -16,18 +16,18 @@ export const useInvestment = (in_investment = 0) => {
         let abortController = new AbortController();
         const { signal } = abortController;
 
-        setLoadingFeature(true)
+        setLoadingInvestment(true)
 
-        appHttp<Feature>(url, signal)
+        appHttp<Investment>(url, signal)
             .then(data => {
-                setFeature(data)
+                setInvestment(data)
             })
             .catch(error => {
                 if (error.name !== 'AbortError') {
-                    setErrorFeature(error)
+                    setErrorInvestment(error)
                 }
             })
-            .finally(() => setLoadingFeature(false))
+            .finally(() => setLoadingInvestment(false))
 
         // Clean up
         return function cancel() {
@@ -35,5 +35,5 @@ export const useInvestment = (in_investment = 0) => {
         };
     }, [url])
 
-    return { feature, loadingFeature, errorFeature }
+    return { investment, loadingInvestment, errorInvestment }
 }
