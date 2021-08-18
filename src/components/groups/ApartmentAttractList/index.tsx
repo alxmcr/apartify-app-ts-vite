@@ -1,5 +1,5 @@
 import { ApartmentAttractListProps } from "../../../types/apartmentComponents";
-import { ApartmentAttract } from "../../pieces/ApartmentAttract";
+import { ApartmentAttract } from "../../relationships/ApartmentAttract";
 import "./ApartmentAttractList.scss";
 
 export const ApartmentAttractList = ({

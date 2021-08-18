@@ -6,7 +6,7 @@ import { ApartmentDetails } from "../../components/pieces/ApartmentDetails";
 import { ApartmentFeatures } from "../../components/pieces/ApartmentFeatures";
 import { ApartmentFlatImageCard } from "../../components/pieces/ApartmentFlatImage";
 import { ApartmentInvestments } from "../../components/pieces/ApartmentInvestments";
-import { ApartmentOutdoorSpaces } from "../../components/groups/ApartmentOutdoors";
+import { ApartmentOutdoorSpaces } from "../../components/relationships/ApartmentOutdoor";
 import { ApartmentVisit } from "../../components/pieces/ApartmentVisit";
 import { useApartment } from "../../hooks/useApartment";
 import { ApartmentPageParamsProps } from "../../types/apartmentComponents";
