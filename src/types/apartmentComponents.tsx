@@ -26,15 +26,6 @@ export interface ApartmentDescriptionProps {
   description: string;
 }
 
-export interface ApartmentDetailsProps {
-  apartment: Apartment;
-}
-
-export interface ApartmentBreadcrumbsProps {
-  state: State | null;
-  neighborhood: Neighborhood | null;
-}
-
 export interface ApartmentFeaturesProps {
   features: Feature[];
 }
@@ -88,6 +79,19 @@ export interface OutdoorSpacesCardProps {
 }
 
 // -- Pieces --
+export interface ApartmentBreadcrumbsProps {
+  ne_neighborhood: number;
+  st_state: number;
+}
+
+export interface ApartmentDetailsProps {
+  ap_street_name: string;
+  ap_ext_number: string;
+  ne_neighborhood: number;
+  st_state: number;
+  ci_city: number;
+}
+
 export interface ApartmentFeatureProps {
   fe_feature: number;
 }

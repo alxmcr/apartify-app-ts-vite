@@ -4,6 +4,7 @@ import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
 import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
 import { AppLoading } from "../../components/common/AppLoading";
 import { ApartmentOutdoorList } from "../../components/lists/ApartmentOutdoorList";
+import { ApartmentBreadcrumbs } from "../../components/pieces/ApartmentBreadcrumbs";
 import { ApartmentDescription } from "../../components/pieces/ApartmentDescription";
 import { ApartmentDetails } from "../../components/pieces/ApartmentDetails";
 import { ApartmentFeatures } from "../../components/pieces/ApartmentFeatures";
@@ -36,7 +37,17 @@ export const ApartmentPage = () => {
             <div className="apartmentpage__column apartmentpage__column--details">
               {apartment !== undefined ? (
                 <>
-                  <ApartmentDetails apartment={apartment} />
+                  <ApartmentBreadcrumbs
+                    ne_neighborhood={apartment?.ne_neighborhood}
+                    st_state={apartment?.st_state}
+                  />
+                  <ApartmentDetails
+                    ap_street_name={apartment?.ap_street_name}
+                    ap_ext_number={apartment?.ap_ext_number}
+                    ci_city={apartment?.ci_city}
+                    ne_neighborhood={apartment?.ne_neighborhood}
+                    st_state={apartment?.st_state}
+                  />
                   <ApartmentDescription
                     description={apartment?.ap_description}
                   />

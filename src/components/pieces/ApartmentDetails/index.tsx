@@ -3,15 +3,20 @@ import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood"
 import { useLocationState } from "../../../hooks/useLocationState";
 import { ApartmentDetailsProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { ApartmentBreadcrumbs } from "../ApartmentBreadcrumbs";
 import "./ApartmentDetails.scss";
 
-export const ApartmentDetails = ({ apartment }: ApartmentDetailsProps) => {
+export const ApartmentDetails = ({
+  ap_street_name = "",
+  ap_ext_number = "",
+  ne_neighborhood = 0,
+  st_state = 0,
+  ci_city = 0,
+}: ApartmentDetailsProps) => {
   const { neighborhood, loadingNeighborhood, errorNeighborhood } =
-    useLocationNeighborhood(apartment.ne_neighborhood);
+    useLocationNeighborhood(ne_neighborhood);
   const { locationState, loadingLocationState, errorLocationState } =
-    useLocationState(apartment.st_state);
-  const { city, loadingCity, errorCity } = useLocationCity(apartment.ci_city);
+    useLocationState(st_state);
+  const { city, loadingCity, errorCity } = useLocationCity(ci_city);
 
   if (loadingNeighborhood) return <AppCircleLoader />;
   if (loadingLocationState) return <AppCircleLoader />;
@@ -24,10 +29,9 @@ export const ApartmentDetails = ({ apartment }: ApartmentDetailsProps) => {
 
   return (
     <div className="apartmentdetails">
-      <ApartmentBreadcrumbs neighborhood={neighborhood} state={locationState} />
       <h1 className="apartmentdetails__title">
         <span className="apartmentdetails__street">
-          {`${apartment?.ap_street_name} ${apartment?.ap_ext_number}, `}
+          {`${ap_street_name} ${ap_ext_number}, `}
         </span>
         {neighborhood !== null ? (
           <>
