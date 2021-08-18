@@ -46,7 +46,7 @@ export interface ApartmentInvestmentsProps {
 }
 
 export interface ApartmentOutdoorSpacesProps {
-  outdoorSpaces: OutdoorSpace[];
+  ap_apartment: number;
 }
 
 export interface ApartmentImagesProps {
