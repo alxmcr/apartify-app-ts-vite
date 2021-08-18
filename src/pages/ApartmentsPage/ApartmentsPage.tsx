@@ -1,6 +1,6 @@
 import { AppError } from "../../components/common/AppError";
 import { AppLoading } from "../../components/common/AppLoading";
-import { ApartmentsGallery } from "../../components/groups/ApartmentsGallery";
+import { ApartmentsGallery } from "../../components/xxxxgroups/ApartmentsGallery";
 import { AparmentsMap } from "../../components/maps/AparmentsMap";
 import { useApartments } from "../../hooks/useApartments";
 import "./ApartmentsPage.scss";

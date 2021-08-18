@@ -74,6 +74,11 @@ export interface ApartmentPageParamsProps {
   id: string;
 }
 
+// -- Cards --
+export interface FeaturesCardProps {
+  ap_apartment: number;
+}
+
 // -- Pieces --
 export interface ApartmentFeatureProps {
   fe_feature: number;
