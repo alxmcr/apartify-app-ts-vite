@@ -82,9 +82,6 @@ export interface Apartment {
   ch_city_hall: number;
   co_country: number;
   st_state: number;
-  features: Feature[];
-  outdoor_spaces: OutdoorSpace[];
-  investments: Investment[];
 }
 
 export interface Photo {
@@ -109,4 +106,20 @@ export interface Attract {
   att_value: string;
   att_is_visible: boolean;
   att_is_card: boolean;
+}
+
+export interface Outdoor {
+  ap_apartment: number;
+  ou_outdoor_space: number;
+  out_value: string;
+  out_is_visible: boolean;
+  out_is_card: boolean;
+}
+
+export interface Invest {
+  ap_apartment: number;
+  in_investment: number;
+  inv_value: string;
+  inv_is_visible: boolean;
+  inv_is_card: boolean;
 }
