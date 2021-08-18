@@ -83,6 +83,10 @@ export interface InvestmentsCardProps {
   ap_apartment: number;
 }
 
+export interface OutdoorSpacesCardProps {
+  ap_apartment: number;
+}
+
 // -- Pieces --
 export interface ApartmentFeatureProps {
   fe_feature: number;
