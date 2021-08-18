@@ -84,6 +84,10 @@ export interface OutdoorSpacesCardProps {
   ap_apartment: number;
 }
 
+export interface FlatCardProps {
+  ap_apartment: number;
+}
+
 export interface AddressCardProps {
   apartment: Apartment;
 }

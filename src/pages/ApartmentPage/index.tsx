@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { AddressCard } from "../../components/cards/AddressCard";
 import { FeaturesCard } from "../../components/cards/FeaturesCard";
+import { FlatCard } from "../../components/cards/FlatCard";
 import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
 import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
 import { AppLoading } from "../../components/common/AppLoading";
@@ -47,6 +48,7 @@ export const ApartmentPage = () => {
                     coordinates={apartment?.ap_coordinates}
                   /> */}
                   <InvestmentsCard ap_apartment={apartment?.ap_apartment} />
+                  <FlatCard ap_apartment={apartment?.ap_apartment} />
                   {/* <ApartmentFlatImageCard flat={apartment.} /> */}
                 </>
               ) : null}
