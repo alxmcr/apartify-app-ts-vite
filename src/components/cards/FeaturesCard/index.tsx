@@ -1,7 +1,7 @@
 import { useAttracts } from "../../../hooks/useAttracts";
 import { FeaturesCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { ApartmentAttractList } from "../../lists/ApartmentAttractList";
+import { ApartmentAttractList } from "../../grids/ApartmentAttractList";
 
 export const FeaturesCard = ({ ap_apartment = 0 }: FeaturesCardProps) => {
   const { attracts, loadingAttracts, errorAttracts } =

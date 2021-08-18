@@ -4,7 +4,7 @@ import { FeaturesCard } from "../../components/cards/FeaturesCard";
 import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
 import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
 import { AppLoading } from "../../components/common/AppLoading";
-import { ApartmentOutdoorList } from "../../components/lists/ApartmentOutdoorList";
+import { ApartmentOutdoorList } from "../../components/grids/ApartmentOutdoorList";
 import { ApartmentBreadcrumbs } from "../../components/pieces/ApartmentBreadcrumbs";
 import { ApartmentDescription } from "../../components/pieces/ApartmentDescription";
 import { ApartmentDetails } from "../../components/pieces/ApartmentDetails";

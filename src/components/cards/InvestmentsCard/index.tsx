@@ -1,7 +1,7 @@
 import { useInvests } from "../../../hooks/useInvests";
 import { InvestmentsCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { ApartmentInvestList } from "../../lists/ApartmentInvestList";
+import { ApartmentInvestList } from "../../grids/ApartmentInvestList";
 import './InvestmentsCard.scss'
 
 export const InvestmentsCard = ({ ap_apartment = 0 }: InvestmentsCardProps) => {

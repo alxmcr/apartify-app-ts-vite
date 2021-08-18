@@ -1,7 +1,7 @@
 import { useOutdoors } from "../../../hooks/useOutdoors";
 import { OutdoorSpacesCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { ApartmentOutdoorList } from "../../lists/ApartmentOutdoorList";
+import { ApartmentOutdoorList } from "../../grids/ApartmentOutdoorList";
 
 export const OutdoorSpacesCard = ({
   ap_apartment = 0,
