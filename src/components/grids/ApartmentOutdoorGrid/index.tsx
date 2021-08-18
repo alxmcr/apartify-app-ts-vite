@@ -1,10 +1,10 @@
-import { ApartmentOutdoorListProps } from "../../../types/apartmentComponents";
+import { ApartmentOutdoorGridProps } from "../../../types/apartmentComponents";
 import { ApartmentOutdoor } from "../../relationships/ApartmentOutdoor";
-import "./ApartmentOutdoorList.scss";
+import "./ApartmentOutdoorGrid.scss";
 
-export const ApartmentOutdoorList = ({
+export const ApartmentOutdoorGrid = ({
   outdoors = [],
-}: ApartmentOutdoorListProps) => {
+}: ApartmentOutdoorGridProps) => {
   return (
     <div className="outdoors">
       {outdoors?.length > 0 ? (

@@ -1,12 +1,12 @@
-import { ApartmentInvestListProps } from "../../../types/apartmentComponents";
+import { ApartmentInvestGridProps } from "../../../types/apartmentComponents";
 import { ApartmentInvest } from "../../relationships/ApartmentInvest";
-import "./ApartmentInvestList.scss";
+import "./ApartmentInvestGrid.scss";
 
-export const ApartmentInvestList = ({
+export const ApartmentInvestGrid = ({
   invests = [],
-}: ApartmentInvestListProps) => {
+}: ApartmentInvestGridProps) => {
   return (
-    <div className="investlist">
+    <div className="invests">
       {invests?.length > 0 ? (
         <>
           {invests.map((invest) => (

@@ -1,7 +1,7 @@
 import { useAttracts } from "../../../hooks/useAttracts";
 import { FeaturesCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { ApartmentAttractList } from "../../grids/ApartmentAttractList";
+import { ApartmentAttractGrid } from "../../grids/ApartmentAttractGrid";
 
 export const FeaturesCard = ({ ap_apartment = 0 }: FeaturesCardProps) => {
   const { attracts, loadingAttracts, errorAttracts } =
@@ -9,12 +9,12 @@ export const FeaturesCard = ({ ap_apartment = 0 }: FeaturesCardProps) => {
 
   if (loadingAttracts) return <AppCircleLoader />;
   if (errorAttracts !== null)
-    return <p>There was an error with this feature list.</p>;
+    return <p>There was an error with these features.</p>;
 
   return (
     <div className="apartmentfeaturescard">
       <h2 className="apartmentfeaturescard__subtitle">Características</h2>
-      <ApartmentAttractList attracts={attracts} />
+      <ApartmentAttractGrid attracts={attracts} />
     </div>
   );
 };

@@ -1,11 +1,11 @@
-.investlist {
+.invests {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
 @media screen and (min-width: 745px) {
-  .investlist {
+  .invests {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem 2rem;

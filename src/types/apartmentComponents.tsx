@@ -130,19 +130,21 @@ export interface ApartmentOutdoorProps {
   out_value: string;
 }
 
-export interface ApartmentAttractListProps {
-  attracts: Attract[];
-}
-
+// -- Lists --
 export interface ApartmentAttractIconsListProps {
   attracts: Attract[];
 }
 
-export interface ApartmentInvestListProps {
+// -- Grids --
+export interface ApartmentAttractGridProps {
+  attracts: Attract[];
+}
+
+export interface ApartmentInvestGridProps {
   invests: Invest[];
 }
 
-export interface ApartmentOutdoorListProps {
+export interface ApartmentOutdoorGridProps {
   outdoors: Outdoor[];
 }
 

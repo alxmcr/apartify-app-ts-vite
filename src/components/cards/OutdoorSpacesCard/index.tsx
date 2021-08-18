@@ -1,7 +1,7 @@
 import { useOutdoors } from "../../../hooks/useOutdoors";
 import { OutdoorSpacesCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { ApartmentOutdoorList } from "../../grids/ApartmentOutdoorList";
+import { ApartmentOutdoorGrid } from "../../grids/ApartmentOutdoorGrid";
 
 export const OutdoorSpacesCard = ({
   ap_apartment = 0,
@@ -11,12 +11,12 @@ export const OutdoorSpacesCard = ({
 
   if (loadingOutdoors) return <AppCircleLoader />;
   if (errorOutdoors !== null)
-    return <p>There was an error with this outdoor spaces list.</p>;
+    return <p>There was an error with these outdoor spaces.</p>;
 
   return (
     <div className="apartmentoutdoorspacescard">
       <h2 className="apartmentoutdoorspacescard__subtitle">Amenidades</h2>
-      <ApartmentOutdoorList outdoors={outdoors} />
+      <ApartmentOutdoorGrid outdoors={outdoors} />
     </div>
   );
 };

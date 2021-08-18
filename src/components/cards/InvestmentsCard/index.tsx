@@ -1,7 +1,7 @@
 import { useInvests } from "../../../hooks/useInvests";
 import { InvestmentsCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { ApartmentInvestList } from "../../grids/ApartmentInvestList";
+import { ApartmentInvestGrid } from "../../grids/ApartmentInvestGrid";
 import './InvestmentsCard.scss'
 
 export const InvestmentsCard = ({ ap_apartment = 0 }: InvestmentsCardProps) => {
@@ -9,12 +9,12 @@ export const InvestmentsCard = ({ ap_apartment = 0 }: InvestmentsCardProps) => {
 
   if (loadingInvests) return <AppCircleLoader />;
   if (errorInvests !== null)
-    return <p>There was an error with this investment list.</p>;
+    return <p>There was an error with these investments.</p>;
 
   return (
     <div className="investmentscard">
       <h2 className="investmentscard__subtitle">Datos de inversión</h2>
-      <ApartmentInvestList invests={invests} />
+      <ApartmentInvestGrid invests={invests} />
     </div>
   );
 };

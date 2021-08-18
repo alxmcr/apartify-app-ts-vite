@@ -1,10 +1,10 @@
-import { ApartmentAttractListProps } from "../../../types/apartmentComponents";
+import { ApartmentAttractGridProps } from "../../../types/apartmentComponents";
 import { ApartmentAttract } from "../../relationships/ApartmentAttract";
-import "./ApartmentAttractList.scss";
+import "./ApartmentAttractGrid.scss";
 
-export const ApartmentAttractList = ({
+export const ApartmentAttractGrid = ({
   attracts = [],
-}: ApartmentAttractListProps) => {
+}: ApartmentAttractGridProps) => {
   return (
     <div className="attracts">
       {attracts?.length > 0 ? (
