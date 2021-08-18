@@ -6,7 +6,7 @@ import { ApartmentDetails } from "../../components/pieces/ApartmentDetails";
 import { ApartmentFeatures } from "../../components/pieces/ApartmentFeatures";
 import { ApartmentFlatImageCard } from "../../components/pieces/ApartmentFlatImage";
 import { ApartmentInvestments } from "../../components/pieces/ApartmentInvestments";
-import { ApartmentOutdoorSpaces } from "../../components/pieces/ApartmentOutdoorSpaces";
+import { ApartmentOutdoorSpaces } from "../../components/groups/ApartmentOutdoors";
 import { ApartmentVisit } from "../../components/pieces/ApartmentVisit";
 import { useApartment } from "../../hooks/useApartment";
 import { ApartmentPageParamsProps } from "../../types/apartmentComponents";
@@ -15,7 +15,7 @@ import "./ApartmentPage.scss";
 
 export const ApartmentPage = () => {
   const { id } = useParams<ApartmentPageParamsProps>();
-  const ap_apartment = !Number(id) ? '0' : id;
+  const ap_apartment = !Number(id) ? "0" : id;
   const { apartment, loadingApartment, errorApartment } = useApartment(
     parseInt(ap_apartment)
   );
@@ -40,10 +40,11 @@ export const ApartmentPage = () => {
                   <ApartmentDescription
                     description={apartment?.ap_description}
                   />
-                  {/* <ApartmentFeatures features={apartment?.features} />
+                  {/* <ApartmentFeatures features={apartment?.features} /> */}
+
                   <ApartmentOutdoorSpaces
                     outdoorSpaces={apartment?.outdoor_spaces}
-                  /> */}
+                  />
                   {/* <ApartmentMapMarker
                     coordinates={apartment?.ap_coordinates}
                   /> */}

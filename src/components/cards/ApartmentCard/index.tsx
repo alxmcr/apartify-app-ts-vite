@@ -21,10 +21,10 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
 
   if (loadingNeighborhood) return <AppCircleLoader />;
   if (loadingAttracts) return <AppCircleLoader />;
-  if (errorAttracts !== null)
-    return <p>There was an error with this feature list.</p>;
   if (errorNeighborhood !== null)
     return <p>There was an error with this neighborhood.</p>;
+  if (errorAttracts !== null)
+    return <p>There was an error with this feature list.</p>;
 
   return (
     <div
