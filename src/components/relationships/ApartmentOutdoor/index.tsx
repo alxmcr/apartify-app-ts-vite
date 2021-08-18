@@ -13,13 +13,13 @@ export const ApartmentOutdoor = ({
     return <p>There was an error with this outdoor space.</p>;
 
   return (
-    <>
+    <li className="outdoor">
       <img
         src={feature?.fe_icon_url}
         alt={feature?.fe_name}
-        className="apartmentoutdoor"
+        className="outdoor__icon"
       />
-      <span className="apartmentoutdoor__name">{out_value}</span>
-    </>
+      <span className="outdoor__name">{out_value}</span>
+    </li>
   );
 };
