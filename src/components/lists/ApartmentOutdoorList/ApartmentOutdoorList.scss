@@ -1,0 +1,14 @@
+.outdoors {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 745px) {
+  .outdoors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    padding: 1rem 0;
+  }
+}

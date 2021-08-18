@@ -6,7 +6,7 @@ export const ApartmentInvestList = ({
   invests = [],
 }: ApartmentInvestListProps) => {
   return (
-    <ul className="investlist">
+    <div className="investlist">
       {invests?.length > 0 ? (
         <>
           {invests.map((invest) => (
@@ -18,6 +18,6 @@ export const ApartmentInvestList = ({
           ))}
         </>
       ) : null}
-    </ul>
+    </div>
   );
 };
