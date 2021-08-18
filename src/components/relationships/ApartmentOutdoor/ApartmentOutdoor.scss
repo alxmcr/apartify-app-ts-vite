@@ -1,27 +1,15 @@
-.apartmentoutdoorspaces {
-    &__pleasantness {
-        display: flex;
-        flex-direction: row;
-        font-size: 0.9rem;
-        gap: 0.5rem;
-    }
-    &__outdoorspaces {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    &__value {
-        font-weight: 700;
-    }
+.apartmentoutdoor {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  gap: 0.5rem;
 }
 
 @media screen and (min-width: 745px) {
-    .apartmentoutdoorspaces {
-        &__outdoorspaces {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem 2rem;
-            padding: 1rem 0;
-        }
-    }
+  .apartmentoutdoor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    padding: 1rem 0;
+  }
 }

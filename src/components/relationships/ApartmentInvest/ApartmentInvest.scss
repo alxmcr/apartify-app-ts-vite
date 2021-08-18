@@ -1,0 +1,14 @@
+.investment {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+  height: 4rem;
+}
+
+@media screen and (min-width: 745px) {
+  .investment {
+    height: 3rem;
+  }
+}

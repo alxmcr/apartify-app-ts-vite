@@ -50,6 +50,11 @@ export interface ApartmentOutdoorSpacesProps {
   out_value: string;
 }
 
+export interface ApartmentInvestProps {
+  in_investment: number;
+  inv_value: string;
+}
+
 export interface ApartmentImagesProps {
   cover: Photo | null;
   images: Photo[] | null;
