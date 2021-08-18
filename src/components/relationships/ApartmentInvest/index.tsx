@@ -14,13 +14,16 @@ export const ApartmentInvest = ({
     return <p>There was an error with this Investment.</p>;
 
   return (
-    <li className="invest">
+    <div className="invest">
       <img
         src={investment?.in_icon_url}
         alt={investment?.in_name}
         className="invest__icon"
       />
-      <span className="invest__name">{inv_value}</span>
-    </li>
+      <p className="invest__details">
+        <span className="invest__label">{investment?.in_name}:</span>
+        <span className="invest__value">{inv_value}</span>
+      </p>
+    </div>
   );
 };
