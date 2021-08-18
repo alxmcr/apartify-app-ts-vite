@@ -1,16 +1,9 @@
 import { useParams } from "react-router-dom";
 import { AppLoading } from "../../components/common/AppLoading";
-import { ApartmentImages } from "../../components/groups/ApartmentImages";
 import { ApartmentDescription } from "../../components/pieces/ApartmentDescription";
 import { ApartmentDetails } from "../../components/pieces/ApartmentDetails";
-import { ApartmentFeatures } from "../../components/pieces/ApartmentFeatures";
-import { ApartmentFlatImageCard } from "../../components/pieces/ApartmentFlatImage";
-import { ApartmentInvestments } from "../../components/pieces/ApartmentInvestments";
-import { ApartmentOutdoorSpaces } from "../../components/relationships/ApartmentOutdoor";
-import { ApartmentVisit } from "../../components/pieces/ApartmentVisit";
 import { useApartment } from "../../hooks/useApartment";
 import { ApartmentPageParamsProps } from "../../types/apartmentComponents";
-
 import "./ApartmentPage.scss";
 
 export const ApartmentPage = () => {
@@ -43,7 +36,7 @@ export const ApartmentPage = () => {
                   {/* <ApartmentFeatures features={apartment?.features} /> */}
 
                   <ApartmentOutdoorSpaces
-                    outdoorSpaces={apartment?.outdoor_spaces}
+                    
                   />
                   {/* <ApartmentMapMarker
                     coordinates={apartment?.ap_coordinates}

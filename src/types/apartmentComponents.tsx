@@ -3,8 +3,10 @@ import {
   Attract,
   Feature,
   Flat,
+  Invest,
   Investment,
   Neighborhood,
+  Outdoor,
   OutdoorSpace,
   Photo,
   State,
@@ -45,16 +47,6 @@ export interface ApartmentInvestmentsProps {
   investments: Investment[];
 }
 
-export interface ApartmentOutdoorSpacesProps {
-  ou_outdoor_space: number;
-  out_value: string;
-}
-
-export interface ApartmentInvestProps {
-  in_investment: number;
-  inv_value: string;
-}
-
 export interface ApartmentImagesProps {
   cover: Photo | null;
   images: Photo[] | null;
@@ -72,15 +64,6 @@ export interface FeatureListProps {
   ap_apartment: number;
 }
 
-export interface ApartmentAttractProps {
-  fe_feature: number;
-  att_value: string;
-}
-
-export interface ApartmentAttractListProps {
-  attracts: Attract[];
-}
-
 export interface FeatureIconProps {
   ap_apartment: number;
   feature: Feature;
@@ -89,6 +72,34 @@ export interface FeatureIconProps {
 // -- Routing --
 export interface ApartmentPageParamsProps {
   id: string;
+}
+
+// -- Relationships --
+export interface ApartmentAttractProps {
+  fe_feature: number;
+  att_value: string;
+}
+
+export interface ApartmentInvestProps {
+  in_investment: number;
+  inv_value: string;
+}
+
+export interface ApartmentOutdoorProps {
+  ou_outdoor_space: number;
+  out_value: string;
+}
+
+export interface ApartmentAttractListProps {
+  attracts: Attract[];
+}
+
+export interface ApartmentInvestListProps {
+  invests: Invest[];
+}
+
+export interface ApartmentOutDoorListProps {
+  outdoors: Outdoor[];
 }
 
 // -- Common --

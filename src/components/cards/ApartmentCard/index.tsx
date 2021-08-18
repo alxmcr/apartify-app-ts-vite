@@ -3,7 +3,7 @@ import { useAttracts } from "../../../hooks/useAttracts";
 import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
 import { ApartmentCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { ApartmentAttractList } from "../../groups/ApartmentAttractList";
+import { ApartmentAttractList } from "../../lists/ApartmentAttractList";
 import { ApartmentAddress } from "../../pieces/ApartmentAddress";
 
 import "./ApartmentCard.scss";

@@ -1,12 +1,12 @@
 import { useFeature } from "../../../hooks/useFeature";
-import { ApartmentOutdoorSpacesProps } from "../../../types/apartmentComponents";
+import { ApartmentOutdoorProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import "./ApartmentOutdoor.scss";
 
 export const ApartmentOutdoor = ({
   ou_outdoor_space,
   out_value,
-}: ApartmentOutdoorSpacesProps) => {
+}: ApartmentOutdoorProps) => {
   const { feature, errorFeature, loadingFeature } = useFeature(ou_outdoor_space);
   if (loadingFeature) return <AppCircleLoader />;
   if (errorFeature !== null)
