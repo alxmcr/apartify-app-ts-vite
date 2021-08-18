@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { AppLoading } from "../../components/common/AppLoading";
+import { ApartmentOutdoorList } from "../../components/lists/ApartmentOutdoorList";
 import { ApartmentDescription } from "../../components/pieces/ApartmentDescription";
 import { ApartmentDetails } from "../../components/pieces/ApartmentDetails";
 import { ApartmentOutdoorSpace } from "../../components/pieces/ApartmentOutdoorSpace";
@@ -37,13 +38,15 @@ export const ApartmentPage = () => {
                   />
                   {/* <ApartmentFeatures features={apartment?.features} /> */}
 
-                  <ApartmentOutdoorSpace />
+                  <ApartmentOutdoorList 
+                    outdoors = {}
+                  />
                   {/* <ApartmentMapMarker
                     coordinates={apartment?.ap_coordinates}
                   /> */}
                   {/* <ApartmentInvestments investments={apartment?.investments} /> */}
                   {/* <ApartmentFlatImageCard flat={apartment.} /> */}
-                </>
+                </Apartmentout>
               ) : null}
             </div>
             <div className="apartmentpage__column apartmentpage__column--visit">

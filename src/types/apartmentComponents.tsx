@@ -74,6 +74,19 @@ export interface ApartmentPageParamsProps {
   id: string;
 }
 
+// -- Pieces --
+export interface ApartmentFeatureProps {
+  fe_feature: number;
+}
+
+export interface ApartmentInvestmentProps {
+  in_investment: number;
+}
+
+export interface ApartmentOutdoorSpaceProps {
+  ou_outdoor_space: number;
+}
+
 // -- Relationships --
 export interface ApartmentAttractProps {
   fe_feature: number;
