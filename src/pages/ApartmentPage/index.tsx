@@ -5,6 +5,7 @@ import { FlatCard } from "../../components/cards/FlatCard";
 import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
 import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
 import { AppLoading } from "../../components/common/AppLoading";
+import { ApartmentPhotoGrid } from "../../components/grids/ApartmentPhotoGrid";
 import { ApartmentAttractIconsGroup } from "../../components/groups/ApartmentAttractIconsGroup";
 import { ApartmentDescription } from "../../components/pieces/ApartmentDescription";
 import { useApartment } from "../../hooks/useApartment";
@@ -26,10 +27,11 @@ export const ApartmentPage = () => {
         <AppLoading />
       ) : (
         <>
-          {/* <ApartmentImages
-            cover={apartment?.ap_url}
-            images={apartment?.ap_gallery}
-          /> */}
+          <ApartmentPhotoGrid 
+            ap_apartment={apartment?.ap_apartment}
+            ap_url={apartment?.ap_url}
+            ap_alt={apartment?.ap_alt}
+          />
           <div className="apartmentpage__content">
             <div className="apartmentpage__column apartmentpage__column--details">
               {apartment !== undefined ? (

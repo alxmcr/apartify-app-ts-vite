@@ -157,6 +157,12 @@ export interface ApartmentOutdoorGridProps {
   outdoors: Outdoor[];
 }
 
+export interface ApartmentPhotoGridProps {
+  ap_apartment: number | undefined;
+  ap_url: string | undefined;
+  ap_alt: string | undefined;
+}
+
 // -- Common --
 
 export interface AppBrandNavProps {
