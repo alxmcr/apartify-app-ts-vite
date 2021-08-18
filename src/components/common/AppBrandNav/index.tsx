@@ -13,6 +13,7 @@ export const AppBrandNav = ({ showMenu, setShowMenu }: AppBrandNavProps) => {
             src="https://res.cloudinary.com/images-alex-projects/image/upload/v1628047381/Portfolio/appartify-assets/svg/apartments-red_oevads.svg"
             alt="Appartify"
             className="appbrandnav__logo"
+            loading="lazy"
           />
         </Link>
         <h2 className="appbrandnav__name">Apartify</h2>
@@ -27,6 +28,7 @@ export const AppBrandNav = ({ showMenu, setShowMenu }: AppBrandNavProps) => {
             alt="Close Menu"
             aria-label="X Button - Close Menu"
             className="appbrandnav__icon appbrandnav__icon--close"
+            loading="lazy"
           />
         </button>
         <button
@@ -38,6 +40,7 @@ export const AppBrandNav = ({ showMenu, setShowMenu }: AppBrandNavProps) => {
             alt="Menu"
             aria-label="Hamburger Button - Open Menu"
             className="appbrandnav__icon appbrandnav__icon--open"
+            loading="lazy"
           />
         </button>
       </div>

@@ -11,6 +11,7 @@ export const ApartmentFlatImageCard = ({
         src={flat.fl_url}
         alt={flat.fl_alt}
         className="apartmentflatimagecard__image"
+        loading="lazy"
       />
     </div>
   );

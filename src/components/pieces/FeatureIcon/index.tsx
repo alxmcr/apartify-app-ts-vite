@@ -8,6 +8,7 @@ export const FeatureIcon = ({ ap_apartment, feature }: FeatureIconProps) => {
         src={feature?.fe_icon_url}
         alt={feature?.fe_name}
         className="featureicon"
+        loading="lazy"
       />
       <span className="featureicon__name">0</span>
     </>

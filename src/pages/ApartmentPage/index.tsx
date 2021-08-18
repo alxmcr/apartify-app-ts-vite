@@ -49,7 +49,6 @@ export const ApartmentPage = () => {
                   /> */}
                   <InvestmentsCard ap_apartment={apartment?.ap_apartment} />
                   <FlatCard ap_apartment={apartment?.ap_apartment} />
-                  {/* <ApartmentFlatImageCard flat={apartment.} /> */}
                 </>
               ) : null}
             </div>

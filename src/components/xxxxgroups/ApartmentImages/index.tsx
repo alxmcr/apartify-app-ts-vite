@@ -12,6 +12,7 @@ export const ApartmentImages = ({
         src={cover?.ph_url}
         alt={cover?.ph_alt}
         className="apartmentimages__cover"
+        loading="lazy"
       />
       <div className="apartmentimages__photos">
         {images?.map((image: Photo) => (

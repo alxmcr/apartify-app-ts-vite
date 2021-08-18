@@ -10,6 +10,7 @@ export const AppFooter = () => {
             src="https://res.cloudinary.com/images-alex-projects/image/upload/v1628047381/Portfolio/appartify-assets/svg/apartments-red_oevads.svg"
             alt="Appartify"
             className="appfooter__logo"
+            loading="lazy"
           />
         </NavLink>
         <h2 className="appfooter__name">Apartify</h2>

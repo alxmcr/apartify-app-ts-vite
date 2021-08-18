@@ -18,6 +18,7 @@ export const FlatCard = ({ ap_apartment = 0 }: FlatCardProps) => {
         src={flats[0]?.fl_url}
         alt={flats[0]?.fl_alt}
         className="flatcard__image"
+        loading="lazy"
       />
     </div>
   );

@@ -17,6 +17,7 @@ export const ApartmentInvestments = ({
               src={investment.in_icon_url}
               alt={investment.in_name}
               className="apartmentinvestments__icon"
+              loading="lazy"
             />
             <p className="apartmentinvestments__details">
               <span className="apartmentinvestments__label">

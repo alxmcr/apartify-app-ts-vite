@@ -18,6 +18,7 @@ export const ApartmentAttractIcon = ({
         src={feature?.fe_icon_url}
         alt={feature?.fe_name}
         className="attracticon__icon"
+        loading="lazy"
       />
       <span className="attracticon__name">{att_value}</span>
     </div>

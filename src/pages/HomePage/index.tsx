@@ -11,6 +11,7 @@ export const HomePage = () => {
         src="https://res.cloudinary.com/images-alex-projects/image/upload/v1628134664/Portfolio/appartify-assets/svg/quite-town_zvewu8.svg"
         alt="Building with apartments"
         className="home__image"
+        loading="lazy"
       />
       <div className="home__column">
         <h1 className="home__phrase">
