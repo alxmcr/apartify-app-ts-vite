@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom";
 import { useLocationCity } from "../../../hooks/useLocationCity";
 import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
 import { useLocationState } from "../../../hooks/useLocationState";
 import { ApartmentDetailsProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
-import { FeatureList } from "../../xxxxgroups/FeatureList";
 import { ApartmentBreadcrumbs } from "../ApartmentBreadcrumbs";
 import "./ApartmentDetails.scss";
 
@@ -43,7 +41,6 @@ export const ApartmentDetails = ({ apartment }: ApartmentDetailsProps) => {
           </>
         ) : null}
       </h1>
-      {/* <FeatureList features={apartment?.features} /> */}
     </div>
   );
 };
