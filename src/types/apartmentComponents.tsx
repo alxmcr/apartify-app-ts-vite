@@ -120,6 +120,10 @@ export interface ApartmentAttractListProps {
   attracts: Attract[];
 }
 
+export interface ApartmentAttractIconsListProps {
+  attracts: Attract[];
+}
+
 export interface ApartmentInvestListProps {
   invests: Invest[];
 }
