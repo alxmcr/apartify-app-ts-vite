@@ -6,7 +6,7 @@ export const ApartmentAttractList = ({
   attracts = [],
 }: ApartmentAttractListProps) => {
   return (
-    <ul className="attracts">
+    <div className="attracts">
       {attracts?.length > 0 ? (
         <>
           {attracts.map((attract) => (
@@ -18,6 +18,6 @@ export const ApartmentAttractList = ({
           ))}
         </>
       ) : null}
-    </ul>
+    </div>
   );
 };
