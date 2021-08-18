@@ -6,15 +6,15 @@ export const ApartmentInvestList = ({
   invests = [],
 }: ApartmentInvestListProps) => {
   return (
-    <ul className="Invests">
+    <ul className="invests">
       {invests?.length > 0 ? (
         <>
-          {invests.map((Invest) => (
-            <li className="Invests__item" key={Invest?.fe_feature}>
-              {Invest?.att_is_card ? (
+          {invests.map((invest) => (
+            <li className="invests__item" key={invest?.in_investment}>
+              {invest?.inv_is_card ? (
                 <ApartmentInvest
-                  fe_feature={Invest?.fe_feature}
-                  att_value={Invest?.att_value}
+                  in_investment={invest?.in_investment}
+                  inv_value={invest?.inv_value}
                 />
               ) : null}
             </li>

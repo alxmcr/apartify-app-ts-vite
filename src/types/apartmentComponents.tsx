@@ -98,7 +98,7 @@ export interface ApartmentInvestListProps {
   invests: Invest[];
 }
 
-export interface ApartmentOutDoorListProps {
+export interface ApartmentOutdoorListProps {
   outdoors: Outdoor[];
 }
 

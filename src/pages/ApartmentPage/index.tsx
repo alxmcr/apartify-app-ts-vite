@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { AppLoading } from "../../components/common/AppLoading";
 import { ApartmentDescription } from "../../components/pieces/ApartmentDescription";
 import { ApartmentDetails } from "../../components/pieces/ApartmentDetails";
+import { ApartmentOutdoorSpace } from "../../components/pieces/ApartmentOutdoorSpace";
+import { ApartmentOutdoor } from "../../components/relationships/ApartmentOutdoor";
 import { useApartment } from "../../hooks/useApartment";
 import { ApartmentPageParamsProps } from "../../types/apartmentComponents";
 import "./ApartmentPage.scss";
@@ -35,9 +37,7 @@ export const ApartmentPage = () => {
                   />
                   {/* <ApartmentFeatures features={apartment?.features} /> */}
 
-                  <ApartmentOutdoorSpaces
-                    
-                  />
+                  <ApartmentOutdoorSpace />
                   {/* <ApartmentMapMarker
                     coordinates={apartment?.ap_coordinates}
                   /> */}
