@@ -31,15 +31,19 @@ export const ApartmentDetails = ({ apartment }: ApartmentDetailsProps) => {
         <span className="apartmentdetails__street">
           {`${apartment?.ap_street_name} ${apartment?.ap_ext_number}, `}
         </span>
-        <span className="apartmentdetails__neighborhood">
-          {`${neighborhood?.ne_name}, `}
-        </span>
-        <span className="apartmentdetails__city">{`${city?.ci_name}, `}</span>
-        <span className="apartmentdetails__state">
-          {`${locationState?.st_name}`}
-        </span>
+        {neighborhood !== null ? (
+          <>
+            <span className="apartmentdetails__neighborhood">
+              {`${neighborhood?.ne_name}, `}
+            </span>
+            <span className="apartmentdetails__city">{`${city?.ci_name}, `}</span>
+            <span className="apartmentdetails__state">
+              {`${locationState?.st_name}`}
+            </span>
+          </>
+        ) : null}
       </h1>
-      <FeatureList features={apartment?.features} />
+      {/* <FeatureList features={apartment?.features} /> */}
     </div>
   );
 };

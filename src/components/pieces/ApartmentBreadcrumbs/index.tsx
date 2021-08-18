@@ -7,7 +7,7 @@ export const ApartmentBreadcrumbs = ({
 }: ApartmentBreadcrumbsProps) => {
   return (
     <p className="breadcumbs">
-      <Link to="/" className="breadcumbs__link">
+      <Link to="/apartments" className="breadcumbs__link">
         Propiedades
       </Link>
       <span className="breadcumbs__address">
