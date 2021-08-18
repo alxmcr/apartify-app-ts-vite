@@ -32,7 +32,7 @@ export const ApartmentPage = () => {
             ap_url={apartment?.ap_url}
             ap_alt={apartment?.ap_alt}
           />
-          <div className="apartmentpage__content">
+          <main className="apartmentpage__content">
             <div className="apartmentpage__column apartmentpage__column--details">
               {apartment !== undefined ? (
                 <>
@@ -57,7 +57,7 @@ export const ApartmentPage = () => {
             <div className="apartmentpage__column apartmentpage__column--visit">
               {/* <ApartmentVisit /> */}
             </div>
-          </div>
+          </main>
         </>
       )}
     </div>

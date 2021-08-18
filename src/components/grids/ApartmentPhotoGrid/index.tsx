@@ -14,7 +14,6 @@ export const ApartmentPhotoGrid = ({
   if (ap_alt === null) return null;
   if (loadingPhotos) return <AppCircleLoader />;
   if (errorPhotos !== null) return <p>There was an error with some photos.</p>;
-  if (photos.length === 0) return null;
 
   return (
     <div className="photos">
