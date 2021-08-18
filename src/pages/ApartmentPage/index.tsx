@@ -37,10 +37,10 @@ export const ApartmentPage = () => {
               {apartment !== undefined ? (
                 <>
                   <ApartmentDetails apartment={apartment} />
-                  {/* <ApartmentDescription
+                  <ApartmentDescription
                     description={apartment?.ap_description}
                   />
-                  <ApartmentFeatures features={apartment?.features} />
+                  {/* <ApartmentFeatures features={apartment?.features} />
                   <ApartmentOutdoorSpaces
                     outdoorSpaces={apartment?.outdoor_spaces}
                   /> */}
