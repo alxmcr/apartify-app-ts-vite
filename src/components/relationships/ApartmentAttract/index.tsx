@@ -13,13 +13,9 @@ export const ApartmentAttract = ({
     return <p>There was an error with this feature.</p>;
 
   return (
-    <>
-      <img
-        src={feature?.fe_icon_url}
-        alt={feature?.fe_name}
-        className="apartmentattract"
-      />
-      <span className="apartmentattract__name">{att_value}</span>
-    </>
+    <div className="attract">
+      <span className="attract__label">{feature?.fe_name}:</span>
+      <span className="attract__value">{att_value}</span>
+    </div>
   );
 };

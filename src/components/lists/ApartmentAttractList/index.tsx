@@ -10,14 +10,11 @@ export const ApartmentAttractList = ({
       {attracts?.length > 0 ? (
         <>
           {attracts.map((attract) => (
-            <li className="attracts__item" key={attract?.fe_feature}>
-              {attract?.att_is_card ? (
-                <ApartmentAttract
-                  fe_feature={attract?.fe_feature}
-                  att_value={attract?.att_value}
-                />
-              ) : null}
-            </li>
+            <ApartmentAttract
+              key={attract?.fe_feature}
+              fe_feature={attract?.fe_feature}
+              att_value={attract?.att_value}
+            />
           ))}
         </>
       ) : null}

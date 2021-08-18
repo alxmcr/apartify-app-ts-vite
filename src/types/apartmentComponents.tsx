@@ -106,6 +106,11 @@ export interface ApartmentAttractProps {
   att_value: string;
 }
 
+export interface ApartmentAttractIconProps {
+  fe_feature: number;
+  att_value: string;
+}
+
 export interface ApartmentInvestProps {
   in_investment: number;
   inv_value: string;
