@@ -4,6 +4,7 @@ import { FeaturesCard } from "../../components/cards/FeaturesCard";
 import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
 import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
 import { AppLoading } from "../../components/common/AppLoading";
+import { ApartmentAttractIconsGroup } from "../../components/groups/ApartmentAttractIconsGroup";
 import { ApartmentDescription } from "../../components/pieces/ApartmentDescription";
 import { useApartment } from "../../hooks/useApartment";
 import { ApartmentPageParamsProps } from "../../types/apartmentComponents";
@@ -33,6 +34,10 @@ export const ApartmentPage = () => {
               {apartment !== undefined ? (
                 <>
                   <AddressCard apartment={apartment} />
+                  <ApartmentAttractIconsGroup
+                    ap_apartment={apartment?.ap_apartment}
+                  />
+                  <hr />
                   <ApartmentDescription
                     description={apartment?.ap_description}
                   />

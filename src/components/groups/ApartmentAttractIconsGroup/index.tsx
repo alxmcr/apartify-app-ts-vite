@@ -16,7 +16,9 @@ export const ApartmentAttractIconsGroup = ({
 
   return (
     <div className="attractgroup">
-      <ApartmentAttractIconsList attracts={attracts} />
+      {attracts.length > 0 ? (
+        <ApartmentAttractIconsList attracts={attracts} />
+      ) : null}
     </div>
   );
 };
