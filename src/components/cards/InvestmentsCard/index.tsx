@@ -12,8 +12,8 @@ export const InvestmentsCard = ({ ap_apartment = 0 }: InvestmentsCardProps) => {
     return <p>There was an error with these investments.</p>;
 
   return (
-    <div className="investmentscard">
-      <h2 className="investmentscard__subtitle">Datos de inversión</h2>
+    <div className="investments_card">
+      <h2 className="investments_card__subtitle">Datos de inversión</h2>
       <ApartmentInvestGrid invests={invests} />
     </div>
   );

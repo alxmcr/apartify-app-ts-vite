@@ -1,4 +1,7 @@
-.flatcard {
+@import "../../../variables";
+
+.flat_card {
+  margin-bottom: $margin-bottom-cards;
   &__image {
     width: 100%;
   }

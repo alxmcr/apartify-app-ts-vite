@@ -120,6 +120,10 @@ export interface ApartmentMapCardProps {
   levelZoom: number;
 }
 
+export interface DescriptionCardProps {
+  description: string;
+}
+
 // -- Pieces --
 export interface ApartmentBreadcrumbsProps {
   neighborhood: Neighborhood | null;

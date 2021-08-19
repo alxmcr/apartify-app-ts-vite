@@ -1,0 +1,10 @@
+@import '../../../variables';
+
+.description_card {
+  margin-bottom: $margin-bottom-cards;
+  &__description {
+    font-size: 0.9rem;
+    line-height: 1.85;
+    text-align: justify;
+  }
+}

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { AddressCard } from "../../components/cards/AddressCard";
 import { ApartmentMapCard } from "../../components/cards/ApartmentMapCard";
+import { DescriptionCard } from "../../components/cards/DescriptionCard";
 import { FeaturesCard } from "../../components/cards/FeaturesCard";
 import { FlatCard } from "../../components/cards/FlatCard";
 import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
@@ -44,7 +45,7 @@ export const ApartmentPage = () => {
                       ap_apartment={apartment?.ap_apartment}
                     />
                     <hr />
-                    <ApartmentDescription
+                    <DescriptionCard
                       description={apartment?.ap_description}
                     />
                     <FeaturesCard ap_apartment={apartment?.ap_apartment} />
