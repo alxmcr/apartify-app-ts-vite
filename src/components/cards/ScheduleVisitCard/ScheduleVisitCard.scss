@@ -34,6 +34,7 @@
     gap: 1rem;
   }
   &__invitation {
+    display: none;
     font-size: 1.1rem;
     font-weight: 800;
     margin-top: 2.5rem;
@@ -67,5 +68,8 @@
     position: sticky;
     top: 0;
     width: 100%;
+    &__invitation {
+      display: block;
+    }
   }
 }
