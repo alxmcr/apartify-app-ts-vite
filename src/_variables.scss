@@ -13,8 +13,7 @@ $gap-basic: 1rem;
 $height-image-card: 10.8rem;
 $height-gallery-photos: ($height-image-card * 2) + (3*$gap-small);
 $height-cover: $height-gallery-photos - (2*$gap-small);
-$height-visit-card-small: 14rem;
-$height-visit-card: 15rem;
+
 $height-logo: 3.5rem;
 $height-logo-footer: 5rem;
 $height-footer: 15rem;
@@ -32,6 +31,11 @@ $ball-gap: 2rem;
 $ball-padding: $ball-height;
 $ball-top: $ball-padding;
 $ball-color: $primary;
+
+/* Visit */
+$height-visit-card-small: 5rem;
+$height-visit-card: 15rem;
+$font-size-visit-button: 1rem;
 
 /* Not Found */
 $height-not-found-card: 26rem;

@@ -4,9 +4,11 @@
   background-color: #fff;
   bottom: 0;
   box-shadow: 1px 3px 15px 1px #bbbbbb;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
   min-height: $height-visit-card-small;
   left: 0;
-  padding: 0.5rem 1rem;
+  padding: 0.85rem 1rem;
   position: fixed;
   width: 100%;
   &__button {
@@ -14,7 +16,9 @@
     background-color: $primary;
     border: none;
     color: $secondary;
+    font-size: $font-size-visit-button;
     font-weight: 700;
+    height: $height-visit-card-small;
     padding: 1rem;
     width: 100%;
     &:hover {
@@ -27,9 +31,9 @@
     margin: 0;
   }
   &__header {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 1rem;
   }
@@ -47,6 +51,7 @@
   }
   &__message {
     color: gray;
+    display: none;
     font-size: 0.9rem;
     margin: 0;
     padding: 1rem 0;
@@ -57,18 +62,37 @@
     display: block;
     font-weight: 700;
     font-size: 1.2rem;
+    &--list {
+      color: black;
+    }
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .visit {
-    background-color: #fff;
-    min-height: $height-visit-card;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
     padding: 0.5rem 1rem;
     position: sticky;
+    min-height: $height-visit-card;
     top: 0;
     width: 100%;
+    &__button {
+      height: auto;
+    }
+    &__header {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
     &__invitation {
+      display: block;
+    }
+    &__message {
       display: block;
     }
   }
