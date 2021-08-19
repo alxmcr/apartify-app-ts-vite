@@ -21,12 +21,12 @@ export const ApartmentsPage = () => {
             <ApartmentsGallery apartments={apartments} />
           </div>
           <div className="apartmentspage__column apartmentspage__column--map">
-            <AparmentsMapCard
+            {/* <AparmentsMapCard
               defaultLatitude={apartments[0].ap_latitude}
               defaultLongitude={apartments[0].ap_longitude}
               levelZoom={14}
               apartments={apartments}
-            />
+            /> */}
           </div>
         </div>
       ) : (

@@ -5,6 +5,7 @@ import { DescriptionCard } from "../../components/cards/DescriptionCard";
 import { FeaturesCard } from "../../components/cards/FeaturesCard";
 import { FlatCard } from "../../components/cards/FlatCard";
 import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
+import { NotFoundCard } from "../../components/cards/NotFoundCard";
 import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
 import { ScheduleVisitCard } from "../../components/cards/ScheduleVisitCard";
 import { AppLoading } from "../../components/common/AppLoading";
@@ -49,11 +50,11 @@ export const ApartmentPage = () => {
                     />
                     <FeaturesCard ap_apartment={apartment?.ap_apartment} />
                     <OutdoorSpacesCard ap_apartment={apartment?.ap_apartment} />
-                    <ApartmentMapCard
+                    {/* <ApartmentMapCard
                       latitude={apartment?.ap_latitude}
                       longitude={apartment?.ap_longitude}
                       levelZoom={15}
-                    />
+                    /> */}
                     <InvestmentsCard ap_apartment={apartment?.ap_apartment} />
                     <FlatCard ap_apartment={apartment?.ap_apartment} />
                   </>
@@ -66,7 +67,7 @@ export const ApartmentPage = () => {
                 </div>
               </main>
             </>
-          ) : null}
+          ) : <NotFoundCard />}
         </>
       )}
     </div>
