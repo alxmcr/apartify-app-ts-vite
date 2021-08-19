@@ -92,6 +92,11 @@ export interface AddressCardProps {
   apartment: Apartment;
 }
 
+export interface ScheduleVisitCardProps {
+  ap_cost_offer: string;
+  ap_cost_list: string;
+}
+
 // -- Pieces --
 export interface ApartmentBreadcrumbsProps {
   neighborhood: Neighborhood | null;

@@ -3,7 +3,8 @@
 .visit {
   background-color: #fff;
   bottom: 0;
-  height: $height-visit-card-small;
+  box-shadow: 1px 3px 15px 1px #bbbbbb;
+  min-height: $height-visit-card-small;
   left: 0;
   padding: 0.5rem 1rem;
   position: fixed;
@@ -61,7 +62,7 @@
 @media screen and (min-width: 768px) {
   .visit {
     background-color: #fff;
-    height: 18rem;
+    min-height: $height-visit-card;
     padding: 0.5rem 1rem;
     position: sticky;
     top: 0;

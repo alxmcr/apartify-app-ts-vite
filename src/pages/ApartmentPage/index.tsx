@@ -56,7 +56,10 @@ export const ApartmentPage = () => {
                   </>
                 </div>
                 <div className="apartmentpage__column apartmentpage__column--visit">
-                  <ScheduleVisitCard />
+                  <ScheduleVisitCard 
+                    ap_cost_list={apartment?.ap_cost_list}
+                    ap_cost_offer={apartment?.ap_cost_offer}
+                  />
                 </div>
               </main>
             </>
