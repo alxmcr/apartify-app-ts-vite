@@ -27,37 +27,39 @@ export const ApartmentPage = () => {
         <AppLoading />
       ) : (
         <>
-          <ApartmentPhotoSection 
-            ap_apartment={apartment?.ap_apartment}
-            ap_url={apartment?.ap_url}
-            ap_alt={apartment?.ap_alt}
-          />
-          <main className="apartmentpage__content">
-            <div className="apartmentpage__column apartmentpage__column--details">
-              {apartment !== undefined ? (
-                <>
-                  <AddressCard apartment={apartment} />
-                  <ApartmentAttractIconsGroup
-                    ap_apartment={apartment?.ap_apartment}
-                  />
-                  <hr />
-                  <ApartmentDescription
-                    description={apartment?.ap_description}
-                  />
-                  <FeaturesCard ap_apartment={apartment?.ap_apartment} />
-                  <OutdoorSpacesCard ap_apartment={apartment?.ap_apartment} />
-                  {/* <ApartmentMapMarker
+          {apartment !== null ? (
+            <>
+              <ApartmentPhotoSection
+                ap_apartment={apartment?.ap_apartment}
+                ap_url={apartment?.ap_url}
+                ap_alt={apartment?.ap_alt}
+              />
+              <main className="apartmentpage__content">
+                <div className="apartmentpage__column apartmentpage__column--details">
+                  <>
+                    <AddressCard apartment={apartment} />
+                    <ApartmentAttractIconsGroup
+                      ap_apartment={apartment?.ap_apartment}
+                    />
+                    <hr />
+                    <ApartmentDescription
+                      description={apartment?.ap_description}
+                    />
+                    <FeaturesCard ap_apartment={apartment?.ap_apartment} />
+                    <OutdoorSpacesCard ap_apartment={apartment?.ap_apartment} />
+                    {/* <ApartmentMapMarker
                     coordinates={apartment?.ap_coordinates}
                   /> */}
-                  <InvestmentsCard ap_apartment={apartment?.ap_apartment} />
-                  <FlatCard ap_apartment={apartment?.ap_apartment} />
-                </>
-              ) : null}
-            </div>
-            <div className="apartmentpage__column apartmentpage__column--visit">
-              {/* <ApartmentVisit /> */}
-            </div>
-          </main>
+                    <InvestmentsCard ap_apartment={apartment?.ap_apartment} />
+                    <FlatCard ap_apartment={apartment?.ap_apartment} />
+                  </>
+                </div>
+                <div className="apartmentpage__column apartmentpage__column--visit">
+                  {/* <ApartmentVisit /> */}
+                </div>
+              </main>
+            </>
+          ) : null}
         </>
       )}
     </div>

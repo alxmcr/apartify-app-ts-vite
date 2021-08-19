@@ -21,11 +21,23 @@ export const ApartmentPhotoSection = ({
 
   return (
     <>
-      {photos !== null ? (
-        <section>
-          <ApartmentPhotoGrid photos={photos} ap_url={ap_url} ap_alt={ap_alt} />
-        </section>
-      ) : null}
+      <section className="photos">
+        <img
+          src={ap_url}
+          alt={ap_alt}
+          className="photos__cover"
+          loading="lazy"
+        />
+        {photos !== null && photos?.length > 0 ? (
+          <div className="photos__group">
+            <ApartmentPhotoGrid
+              photos={photos}
+              ap_url={ap_url}
+              ap_alt={ap_alt}
+            />
+          </div>
+        ) : null}
+      </section>
     </>
   );
 };
