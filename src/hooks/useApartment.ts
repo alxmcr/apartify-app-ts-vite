@@ -19,7 +19,11 @@ export const useApartment = (id: number) => {
         fetch(url, { signal })
             .then(response => response.json())
             .then(data => {
-                setApartment(data)
+                const { detail } = data;
+
+                if (!detail) {
+                    setApartment(data)
+                }
             })
             .catch(error => {
                 if (error.name !== 'AbortError') {
