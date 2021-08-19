@@ -13,6 +13,23 @@ import {
   State,
 } from "./apartmentTypes";
 
+// -- Common --
+
+export interface AppBrandNavProps {
+  showMenu: boolean;
+  setShowMenu: (showMenu: boolean) => void;
+}
+
+export interface AppErrorProps {
+  errorMessage: string;
+}
+
+export interface AppNavProps {
+  showMenu: boolean;
+}
+
+// -----
+
 export interface ApartmentCardProps {
   apartment: Apartment;
 }
@@ -97,6 +114,12 @@ export interface ScheduleVisitCardProps {
   ap_cost_list: string;
 }
 
+export interface ApartmentMapCardProps {
+  latitude: number;
+  longitude: number;
+  levelZoom: number;
+}
+
 // -- Pieces --
 export interface ApartmentBreadcrumbsProps {
   neighborhood: Neighborhood | null;
@@ -168,17 +191,9 @@ export interface ApartmentPhotoGridProps {
   ap_alt: string | undefined;
 }
 
-// -- Common --
-
-export interface AppBrandNavProps {
-  showMenu: boolean;
-  setShowMenu: (showMenu: boolean) => void;
-}
-
-export interface AppErrorProps {
-  errorMessage: string;
-}
-
-export interface AppNavProps {
-  showMenu: boolean;
+// -- Map --
+export interface ApartmentMapMarkerProps {
+  latitude: number;
+  longitude: number;
+  levelZoom: number;
 }
