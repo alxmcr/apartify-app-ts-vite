@@ -20,8 +20,8 @@ export const usePhotos = (ap_apartment = 0) => {
 
         appHttp<Photo[]>(url, signal)
             .then(data => {
-                const photosByApartment = data?.filter(attractItem => {
-                    return attractItem?.ap_apartment === ap_apartment
+                const photosByApartment = data?.filter(photoItem => {
+                    return photoItem?.ap_apartment === ap_apartment
                 })
                 setPhotos(photosByApartment)
             })
