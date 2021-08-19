@@ -158,7 +158,7 @@ export interface ApartmentOutdoorGridProps {
 }
 
 export interface ApartmentPhotoGridProps {
-  ap_apartment: number | undefined;
+  photos: Photo[];
   ap_url: string | undefined;
   ap_alt: string | undefined;
 }
