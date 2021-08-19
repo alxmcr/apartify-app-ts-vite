@@ -9,7 +9,6 @@ import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
 import { ScheduleVisitCard } from "../../components/cards/ScheduleVisitCard";
 import { AppLoading } from "../../components/common/AppLoading";
 import { ApartmentAttractIconsGroup } from "../../components/groups/ApartmentAttractIconsGroup";
-import { ApartmentDescription } from "../../components/pieces/ApartmentDescription";
 import { ApartmentPhotoSection } from "../../components/sections/ApartmentPhotoSection";
 import { useApartment } from "../../hooks/useApartment";
 import { ApartmentPageParamsProps } from "../../types/apartmentComponents";
@@ -50,11 +49,11 @@ export const ApartmentPage = () => {
                     />
                     <FeaturesCard ap_apartment={apartment?.ap_apartment} />
                     <OutdoorSpacesCard ap_apartment={apartment?.ap_apartment} />
-                    {/* <ApartmentMapCard
+                    <ApartmentMapCard
                       latitude={apartment?.ap_latitude}
                       longitude={apartment?.ap_longitude}
                       levelZoom={15}
-                    /> */}
+                    />
                     <InvestmentsCard ap_apartment={apartment?.ap_apartment} />
                     <FlatCard ap_apartment={apartment?.ap_apartment} />
                   </>

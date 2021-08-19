@@ -14,18 +14,24 @@ export const ApartmentsPage = () => {
   return loadingApartments ? (
     <AppLoading />
   ) : (
-    <div className="apartmentspage">
-      <div className="apartmentspage__column apartmentspage__column--apartments">
-        <ApartmentsGallery apartments={apartments} />
-      </div>
-      <div className="apartmentspage__column apartmentspage__column--map">
-        <AparmentsMapCard
-          defaultLatitude={19.45202521106324}
-          defaultLongitude={-99.15246963500977}
-          levelZoom={14}
-          apartments={apartments}
-        />
-      </div>
-    </div>
+    <>
+      {apartments.length > 0 ? (
+        <div className="apartmentspage">
+          <div className="apartmentspage__column apartmentspage__column--apartments">
+            <ApartmentsGallery apartments={apartments} />
+          </div>
+          <div className="apartmentspage__column apartmentspage__column--map">
+            <AparmentsMapCard
+              defaultLatitude={apartments[0].ap_latitude}
+              defaultLongitude={apartments[0].ap_longitude}
+              levelZoom={14}
+              apartments={apartments}
+            />
+          </div>
+        </div>
+      ) : (
+        <p>No hay departmentos registrados</p>
+      )}
+    </>
   );
 };
