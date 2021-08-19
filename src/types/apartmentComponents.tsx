@@ -124,6 +124,13 @@ export interface DescriptionCardProps {
   description: string;
 }
 
+export interface AparmentsMapCardProps {
+  defaultLatitude: number;
+  defaultLongitude: number;
+  levelZoom: number;
+  apartments: Apartment[];
+}
+
 // -- Pieces --
 export interface ApartmentBreadcrumbsProps {
   neighborhood: Neighborhood | null;
@@ -200,4 +207,11 @@ export interface ApartmentMapMarkerProps {
   latitude: number;
   longitude: number;
   levelZoom: number;
+}
+
+export interface AparmentMarkersMapProps {
+  defaultLatitude: number;
+  defaultLongitude: number;
+  levelZoom: number;
+  apartments: Apartment[];
 }

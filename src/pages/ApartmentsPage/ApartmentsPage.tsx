@@ -1,7 +1,7 @@
+import { AparmentsMapCard } from "../../components/cards/AparmentsMapCard";
 import { AppError } from "../../components/common/AppError";
 import { AppLoading } from "../../components/common/AppLoading";
 import { ApartmentsGallery } from "../../components/xxxxgroups/ApartmentsGallery";
-import { AparmentsMap } from "../../components/maps/AparmentsMap";
 import { useApartments } from "../../hooks/useApartments";
 import "./ApartmentsPage.scss";
 
@@ -19,12 +19,12 @@ export const ApartmentsPage = () => {
         <ApartmentsGallery apartments={apartments} />
       </div>
       <div className="apartmentspage__column apartmentspage__column--map">
-        {/* <AparmentsMap
+        <AparmentsMapCard
           defaultLatitude={19.45202521106324}
           defaultLongitude={-99.15246963500977}
           levelZoom={14}
           apartments={apartments}
-        /> */}
+        />
       </div>
     </div>
   );
