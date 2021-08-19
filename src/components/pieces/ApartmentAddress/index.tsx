@@ -1,4 +1,5 @@
 import { ApartmentAddressProps } from "../../../types/apartmentComponents";
+import './ApartmentAddress.scss'
 
 export const ApartmentAddress = ({
   ap_street_name = "",

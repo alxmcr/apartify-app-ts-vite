@@ -4,7 +4,6 @@ import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood"
 import { ApartmentCardProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import { ApartmentAttractIconsGroup } from "../../groups/ApartmentAttractIconsGroup";
-import { ApartmentAttractIconsList } from "../../lists/ApartmentAttractIconsList";
 import { ApartmentAddress } from "../../pieces/ApartmentAddress";
 
 import "./ApartmentCard.scss";
