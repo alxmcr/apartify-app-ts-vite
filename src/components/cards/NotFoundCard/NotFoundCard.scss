@@ -1,0 +1,40 @@
+@import "../../../variables";
+
+.notfoundcard {
+  align-items: center;
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: $height-not-found-card;
+  gap: 1rem;
+  &__link {
+    background-color: $primary;
+    border-radius: 0.5rem;
+    color: white;
+    display: block;
+    padding: 1rem 1.2rem;
+    text-decoration: none;
+    &:hover {
+      font-weight: 700;
+      transform: scale(1.1);
+    }
+  }
+  &__description {
+    text-align: center;
+  }
+  &__subtitle {
+    margin: 0;
+    text-align: center;
+  }
+  &__title {
+    font-size: $title-not-found-card;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 868px) {
+  .notfoundcard {
+    height: 70vh;
+  }
+}

@@ -3,6 +3,7 @@ import { AddressCard } from "../../components/cards/AddressCard";
 import { FeaturesCard } from "../../components/cards/FeaturesCard";
 import { FlatCard } from "../../components/cards/FlatCard";
 import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
+import { NotFoundCard } from "../../components/cards/NotFoundCard";
 import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
 import { ScheduleVisitCard } from "../../components/cards/ScheduleVisitCard";
 import { AppLoading } from "../../components/common/AppLoading";
@@ -56,14 +57,16 @@ export const ApartmentPage = () => {
                   </>
                 </div>
                 <div className="apartmentpage__column apartmentpage__column--visit">
-                  <ScheduleVisitCard 
+                  <ScheduleVisitCard
                     ap_cost_list={apartment?.ap_cost_list}
                     ap_cost_offer={apartment?.ap_cost_offer}
                   />
                 </div>
               </main>
             </>
-          ) : null}
+          ) : (
+            <NotFoundCard />
+          )}
         </>
       )}
     </div>
