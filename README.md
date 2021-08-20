@@ -14,7 +14,7 @@ Find the apartment of your dreams.
   
 ## Lessons Learned
 
-I learned and practice more about HTML, CSS, JS, TypeScript, React.js, and React Hooks.
+I learned and practice more about `HTML`, `CSS`, `JS`, `TypeScript`, `React.js`, and `React Hooks`.
 
   
 ## Run Locally
@@ -46,24 +46,38 @@ Start the server
   
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you will need to add the following environment variables to your `.env` file
 
-`REACT_APP_ACCESS_TOKEN_MAPBOX`
+`VITE_APP_ACCESS_TOKEN_MAPBOX`
 
 You should put as value the API KEY that you got from [Mapbox's API](https://www.mapbox.com/).
 
-`REACT_APP_API_BASE_URL`
+`VITE_APP_ACCESS_STYLE_MAP_MAPBOX`
+
+Mapbox styles (like `mapbox://styles/mapbox/streets-v11` or `mapbox://styles/mapbox/outdoors-v11`).
+
+`VITE_APP_API_BASE_URL`
 
 Base URL to your REST API.
 
-`REACT_APP_API_BASE_URL_GEO`
+`VITE_APP_API_VERSION`
 
-Base URL to your REST API with Geo data.
+API REST version: `v1`, `v2`, and so on.
 
+Also we need to add them in `global.d.ts`:
+
+```javascript
+interface ImportMetaEnv {
+    VITE_APP_ACCESS_TOKEN_MAPBOX: string
+    VITE_APP_ACCESS_STYLE_MAP_MAPBOX: string
+    VITE_APP_API_VERSION: string
+    VITE_APP_API_BASE_URL: string
+}
+```
   
 ## Tech Stack
 
-HTML, CSS, JavaScript, TypeScript, React.js
+`HTML`, `CSS`, `JavaScript`, `TypeScript`, and `React.js`.
 
   
 ## Screenshots
@@ -83,6 +97,6 @@ HTML, CSS, JavaScript, TypeScript, React.js
   
 ## Feedback
 
-If you have any feedback, please reach out to us at amcocarojas@gmail.com.
+If you have any feedback, please reach out to me at amcocarojas@gmail.com.
 
   
