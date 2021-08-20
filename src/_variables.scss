@@ -44,7 +44,9 @@ $title-not-found-card: 7rem;
 
 /* Cards */
 $margin-bottom-cards: 3rem;
-$height-apartment-card: 23rem;
+$height-apartment-card-small: 30rem;
+$height-apartment-card: 22rem;
 
 /* Images */
+$height-apartment-cover-small: $height-apartment-card-small / 2;
 $height-apartment-cover: $height-apartment-card / 2;

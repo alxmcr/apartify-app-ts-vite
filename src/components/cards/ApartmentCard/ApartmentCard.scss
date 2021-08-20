@@ -1,54 +1,55 @@
 @import "../../../variables";
 
 .apartmentcard {
-    background-color: #fff;
-    box-shadow: 2px 2px 20px 2px rgb(0 0 31 / 35%);
-    height: $height-apartment-card;
-    transition: all 0.3s;
-    &:hover {
-        transform: scale(1.05);
-        cursor: pointer;
+  background-color: #fff;
+  box-shadow: 2px 2px 20px 2px rgb(0 0 31 / 35%);
+  height: $height-apartment-card-small;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  &__address {
+    color: rgb(131, 131, 131);
+    font-size: 0.9rem;
+  }
+  &__cost {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    font-size: 1.2rem;
+    gap: 1.5rem;
+    &--offer {
+      color: $primary;
     }
-    &__address{
-        color: rgb(131, 131, 131);
-        font-size: 0.9rem;
+    &--list {
+      text-decoration: line-through;
     }
-    &__cost {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        font-weight: 700;
-        font-size: 1.2rem;
-        gap: 1.5rem;
-        &--offer {
-            color: $primary;
-        }
-        &--list {
-            text-decoration: line-through;
-        }
-    }
-    &__footer {
-        padding: 0 0.8rem;
-    }
-    &__image {
-        height: $height-apartment-cover;
-        object-fit: cover;
-        width: 100%;
-    }
+  }
+  &__footer {
+    padding: 0 0.8rem;
+  }
+  &__image {
+    height: $height-apartment-cover-small;
+    object-fit: cover;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 468px) {
-    .apartmentcard {
-        &__image {
-            height: 20rem;
-        } 
+  .apartmentcard {
+    &__image {
+      height: $height-apartment-cover-small;
     }
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .apartmentcard {
-        &__image {
-            height: 12rem;
-        } 
+  .apartmentcard {
+    height: $height-apartment-card;
+    &__image {
+      height: $height-apartment-cover;
     }
+  }
 }
