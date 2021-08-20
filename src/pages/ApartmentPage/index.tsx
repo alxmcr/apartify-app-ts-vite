@@ -3,7 +3,7 @@ import { AddressCard } from "../../components/cards/AddressCard";
 import { ApartmentMapCard } from "../../components/cards/ApartmentMapCard";
 import { DescriptionCard } from "../../components/cards/DescriptionCard";
 import { FeaturesCard } from "../../components/cards/FeaturesCard";
-import { FlatCard } from "../../components/cards/FlatCard";
+import { FloorPlanCard } from "../../components/cards/FloorPlanCard";
 import { InvestmentsCard } from "../../components/cards/InvestmentsCard";
 import { NotFoundCard } from "../../components/cards/NotFoundCard";
 import { OutdoorSpacesCard } from "../../components/cards/OutdoorSpacesCard";
@@ -56,7 +56,7 @@ export const ApartmentPage = () => {
                       levelZoom={13}
                     /> */}
                     <InvestmentsCard ap_apartment={apartment?.ap_apartment} />
-                    <FlatCard ap_apartment={apartment?.ap_apartment} />
+                    <FloorPlanCard ap_apartment={apartment?.ap_apartment} />
                   </>
                 </div>
                 <div className="apartmentpage__column apartmentpage__column--visit">

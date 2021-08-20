@@ -114,6 +114,10 @@ export interface FlatCardProps {
   ap_apartment: number;
 }
 
+export interface FloorPlanCardProps {
+  ap_apartment: number;
+}
+
 export interface AddressCardProps {
   apartment: Apartment;
 }

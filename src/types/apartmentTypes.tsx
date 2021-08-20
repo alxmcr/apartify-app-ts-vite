@@ -92,10 +92,10 @@ export interface Photo {
   ap_apartment: number;
 }
 
-export interface Flat {
-  fl_flat: number;
-  fl_url: string;
-  fl_alt: string;
+export interface FloorPlan {
+  fp_floor_plan: number;
+  fp_url: string;
+  fp_alt: string;
   ap_apartment: number;
 }
 

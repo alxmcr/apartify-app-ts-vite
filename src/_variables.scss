@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $primary: #ff5a5a;
 $primary-hue-degree: 145deg;
 $primary-hue: adjust-hue($primary, $primary-hue-degree);
@@ -48,5 +50,5 @@ $height-apartment-card-small: 30rem;
 $height-apartment-card: 22rem;
 
 /* Images */
-$height-apartment-cover-small: $height-apartment-card-small / 2;
-$height-apartment-cover: $height-apartment-card / 2;
+$height-apartment-cover-small: math.div($height-apartment-card-small, 2);
+$height-apartment-cover: math.div($height-apartment-card, 2);
