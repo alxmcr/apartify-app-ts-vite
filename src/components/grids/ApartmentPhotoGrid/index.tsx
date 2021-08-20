@@ -6,7 +6,7 @@ export const ApartmentPhotoGrid = ({
 }: ApartmentPhotoGridProps) => {
   return (
     <>
-      {photos.map((photo) => (
+      {photos.slice(0, 2).map((photo) => (
         <img
           key={photo?.ph_photo}
           src={photo?.ph_url}
