@@ -22,13 +22,13 @@ I learned and practice more about `HTML`, `CSS`, `JS`, `TypeScript`, `React.js`,
 Clone the project
 
 ```bash
-  git clone https://github.com/alxmcr/apartify-react-app
+  git clone https://github.com/alxmcr/apartify-app-ts-vite
 ```
 
 Go to the project directory
 
 ```bash
-  cd apartify-react-app
+  cd apartify-app-ts-vite
 ```
 
 Install dependencies
