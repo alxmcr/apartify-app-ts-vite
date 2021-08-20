@@ -5,7 +5,7 @@ import "./ApartmentMapCard.scss";
 export const ApartmentMapCard = ({
   latitude = 19.451119091716365,
   longitude = -99.15295438729619,
-  levelZoom = 15,
+  levelZoom = 13,
 }: ApartmentMapCardProps) => {
   return (
     <div className="apartment_map_card">

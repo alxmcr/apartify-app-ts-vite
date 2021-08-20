@@ -3,16 +3,17 @@ $primary-hue-degree: 145deg;
 $primary-hue: adjust-hue($primary, $primary-hue-degree);
 $primary-soft: #2c6ecf;
 $secondary: #fff;
-$bg-body:#fafaff;
+$bg-body: #fafaff;
 $bg-body-gradient: linear-gradient(to right, $primary, $secondary);
 $font-family-headings: "Raleway", sans-serif;
 $font-family-body: "Open Sans", sans-serif;
-$filter-images: invert(43%) sepia(41%) saturate(4158%) hue-rotate(146deg) brightness(101%) contrast(101%);
+$filter-images: invert(43%) sepia(41%) saturate(4158%) hue-rotate(146deg)
+  brightness(101%) contrast(101%);
 $gap-small: 0.5rem;
 $gap-basic: 1rem;
 $height-image-card: 10.8rem;
-$height-gallery-photos: ($height-image-card * 2) + (3*$gap-small);
-$height-cover: $height-gallery-photos - (2*$gap-small);
+$height-gallery-photos: ($height-image-card * 2) + (3 * $gap-small);
+$height-cover: $height-gallery-photos - (2 * $gap-small);
 
 $height-logo: 3.5rem;
 $height-logo-footer: 5rem;
@@ -43,3 +44,7 @@ $title-not-found-card: 7rem;
 
 /* Cards */
 $margin-bottom-cards: 3rem;
+$height-apartment-card: 23rem;
+
+/* Images */
+$height-apartment-cover: $height-apartment-card / 2;

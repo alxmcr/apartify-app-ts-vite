@@ -2,7 +2,8 @@
 
 .apartmentcard {
     background-color: #fff;
-    box-shadow: 2px 2px 20px 2px rgb(0 0 31 / 35%);;
+    box-shadow: 2px 2px 20px 2px rgb(0 0 31 / 35%);
+    height: $height-apartment-card;
     transition: all 0.3s;
     &:hover {
         transform: scale(1.05);
@@ -30,7 +31,8 @@
         padding: 0 0.8rem;
     }
     &__image {
-        height: 15rem;
+        height: $height-apartment-cover;
+        object-fit: cover;
         width: 100%;
     }
 }

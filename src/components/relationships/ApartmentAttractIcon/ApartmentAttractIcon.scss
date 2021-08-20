@@ -6,10 +6,11 @@
   flex-direction: row;
   gap: 0.5rem;
   &__icon {
-    height: 1.5rem;
+    height: 1.25rem;
     filter: $filter-images;
   }
   &__name {
+    font-size: 0.85rem;
     font-weight: 700;
   }
 }

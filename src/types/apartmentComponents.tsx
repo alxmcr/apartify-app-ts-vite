@@ -28,6 +28,14 @@ export interface AppNavProps {
   showMenu: boolean;
 }
 
+export interface AppColumnProps {
+  children: React.ReactNode;
+}
+
+export interface AppColumnsProps {
+  children: React.ReactNode;
+}
+
 // -----
 
 export interface ApartmentCardProps {
@@ -200,6 +208,10 @@ export interface ApartmentPhotoGridProps {
   photos: Photo[];
   ap_url: string | undefined;
   ap_alt: string | undefined;
+}
+
+export interface ApartmentsGridProps {
+  apartments: Apartment[];
 }
 
 // -- Map --

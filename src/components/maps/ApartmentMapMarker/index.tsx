@@ -7,7 +7,7 @@ import { ApartmentMapMarkerProps } from "../../../types/apartmentComponents";
 export const ApartmentMapMarker = ({
   latitude = 19.451119091716365,
   longitude = -99.15295438729619,
-  levelZoom = 15,
+  levelZoom = 13,
 }: ApartmentMapMarkerProps) => {
   const mapContainerRef = useRef(null);
 

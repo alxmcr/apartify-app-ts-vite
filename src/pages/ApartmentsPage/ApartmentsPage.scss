@@ -1,25 +1,12 @@
-.apartmentspage {
-  display: grid;
-  grid-template-columns: 1fr;
-  &__column {
-    &--map {
-      display: none;
-    }
-  }
-}
+@import '../../variables';
 
-@media screen and (min-width: 768px) {
-  .apartmentspage {
-    display: grid;
-    grid-template-columns: 2fr 1.3fr;
-    &__column {
-      height: 84vh;
-      &--map {
-        display: block;
-      }
-      &--apartments {
-        overflow-y: auto; 
-      }
-    }
+.apartments_page {
+  &__subtitle {
+    border-left: 4px solid $primary;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
   }
 }

@@ -53,7 +53,7 @@ export const ApartmentPage = () => {
                     {/* <ApartmentMapCard
                       latitude={apartment?.ap_latitude}
                       longitude={apartment?.ap_longitude}
-                      levelZoom={15}
+                      levelZoom={13}
                     /> */}
                     <InvestmentsCard ap_apartment={apartment?.ap_apartment} />
                     <FlatCard ap_apartment={apartment?.ap_apartment} />
