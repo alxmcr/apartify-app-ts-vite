@@ -9,8 +9,6 @@ $bg-body: #fafaff;
 $bg-body-gradient: linear-gradient(to right, $primary, $secondary);
 $font-family-headings: "Raleway", sans-serif;
 $font-family-body: "Open Sans", sans-serif;
-$filter-images: invert(43%) sepia(41%) saturate(4158%) hue-rotate(146deg)
-  brightness(101%) contrast(101%);
 $gap-small: 0.5rem;
 $gap-basic: 1rem;
 $height-image-card: 10.8rem;
@@ -52,3 +50,6 @@ $height-apartment-card: 22rem;
 /* Images */
 $height-apartment-cover-small: math.div($height-apartment-card-small, 2);
 $height-apartment-cover: math.div($height-apartment-card, 2);
+
+/* Color filter */
+$color-filter-feature-icons: invert(43%) sepia(41%) saturate(4158%) hue-rotate(146deg) brightness(101%) contrast(101%);
