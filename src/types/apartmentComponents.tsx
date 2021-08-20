@@ -3,7 +3,6 @@ import {
   Attract,
   City,
   Feature,
-  Flat,
   Invest,
   Investment,
   Neighborhood,
@@ -57,10 +56,6 @@ export interface ApartmentFeaturesProps {
   features: Feature[];
 }
 
-export interface ApartmentFlatImageCardProps {
-  flat: Flat;
-}
-
 export interface ApartmentInvestmentsProps {
   investments: Investment[];
 }
@@ -107,10 +102,6 @@ export interface InvestmentsCardProps {
 }
 
 export interface OutdoorSpacesCardProps {
-  ap_apartment: number;
-}
-
-export interface FlatCardProps {
   ap_apartment: number;
 }
 
