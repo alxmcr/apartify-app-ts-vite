@@ -7,8 +7,7 @@ export const useApartment = (id: number) => {
     const [loadingApartment, setLoadingApartment] = useState(false);
     const versionAPI = import.meta.env.VITE_APP_API_VERSION;
     const baseURL = import.meta.env.VITE_APP_API_BASE_URL;
-    const resource = import.meta.env.VITE_APP_API_RESOURCE_APARTMENTS;
-    const url = `${baseURL}/${versionAPI}/${resource}/${id}` || ''
+    const url = `${baseURL}/${versionAPI}/apartments/${id}` || ''
 
     useEffect(() => {
         // Abort fetch

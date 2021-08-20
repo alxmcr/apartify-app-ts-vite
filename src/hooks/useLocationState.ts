@@ -7,8 +7,7 @@ export const useLocationState = (id = 0) => {
     const [loadingLocationState, setLoadingLocationState] = useState(false);
     const versionAPI = import.meta.env.VITE_APP_API_VERSION;
     const baseURL = import.meta.env.VITE_APP_API_BASE_URL;
-    const resource = import.meta.env.VITE_APP_API_RESOURCE_STATES;
-    const url = `${baseURL}/${versionAPI}/${resource}/${id}` || ''
+    const url = `${baseURL}/${versionAPI}/states/${id}` || ''
 
     useEffect(() => {
         // Abort fetch

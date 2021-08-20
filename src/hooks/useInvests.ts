@@ -8,8 +8,7 @@ export const useInvests = (ap_apartment = 0) => {
     const [loadingInvests, setLoadingInvests] = useState(false);
     const versionAPI = import.meta.env.VITE_APP_API_VERSION;
     const baseURL = import.meta.env.VITE_APP_API_BASE_URL;
-    const resource = import.meta.env.VITE_APP_API_RESOURCE_INVESTS;
-    const url = `${baseURL}/${versionAPI}/${resource}` || ''
+    const url = `${baseURL}/${versionAPI}/invests` || ''
 
     useEffect(() => {
         // Abort fetch

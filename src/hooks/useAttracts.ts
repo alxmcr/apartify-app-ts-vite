@@ -8,8 +8,7 @@ export const useAttracts = (ap_apartment = 0) => {
     const [loadingAttracts, setLoadingAttracts] = useState(false);
     const versionAPI = import.meta.env.VITE_APP_API_VERSION;
     const baseURL = import.meta.env.VITE_APP_API_BASE_URL;
-    const resource = import.meta.env.VITE_APP_API_RESOURCE_ATTRACTS;
-    const url = `${baseURL}/${versionAPI}/${resource}` || ''
+    const url = `${baseURL}/${versionAPI}/attracts` || ''
 
     useEffect(() => {
         // Abort fetch
