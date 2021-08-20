@@ -21,19 +21,19 @@ export const ApartmentsPage = () => {
       {apartments.length > 0 ? (
         <AppColumns>
           <>
-            <AppColumn>
+            <AppColumn variant="apartments">
               <h2 className="apartments_page__subtitle">
                 {apartments?.length} resultados encontrados
               </h2>
               <ApartmentsGrid apartments={apartments} />
             </AppColumn>
-            <AppColumn>
-              <AparmentsMapCard
+            <AppColumn variant="map">
+              {/* <AparmentsMapCard
                 defaultLatitude={apartments[0].ap_latitude}
                 defaultLongitude={apartments[0].ap_longitude}
                 levelZoom={13}
                 apartments={apartments}
-              />
+              /> */}
             </AppColumn>
           </>
         </AppColumns>

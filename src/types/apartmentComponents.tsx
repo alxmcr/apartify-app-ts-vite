@@ -29,6 +29,7 @@ export interface AppNavProps {
 }
 
 export interface AppColumnProps {
+  variant: string;
   children: React.ReactNode;
 }
 
