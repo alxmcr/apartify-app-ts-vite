@@ -86,7 +86,7 @@ interface ImportMetaEnv {
 
 ![Apartments](https://res.cloudinary.com/images-alex-projects/image/upload/v1629524217/Portfolio/appartify-assets/images/apartments-map_repfwl.png)
 
-![Apartment](https://res.cloudinary.com/images-alex-projects/image/upload/v1629524217/Portfolio/appartify-assets/images/apartments-map_repfwl.png)
+![Apartment](https://res.cloudinary.com/images-alex-projects/image/upload/v1629524217/Portfolio/appartify-assets/images/aparment-image_zlfdvv.png)
 
   
 ## Demo
