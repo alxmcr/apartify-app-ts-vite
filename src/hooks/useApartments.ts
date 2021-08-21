@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { appHttp } from "../helpers/appHttp";
 import { Apartment } from "../types/apartmentTypes";
 
 export const useApartments = () => {
@@ -15,8 +16,7 @@ export const useApartments = () => {
         const { signal } = abortController;
 
         setLoadingApartments(true)
-        fetch(url, { signal })
-            .then(response => response.json())
+        appHttp<Apartment[]>(url, signal)
             .then(data => {
                 setApartments(data)
             })

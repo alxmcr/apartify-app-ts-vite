@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { appHttp } from "../helpers/appHttp";
 import { Feature } from "../types/apartmentTypes";
 
 export const useFeatures = () => {
@@ -15,8 +16,7 @@ export const useFeatures = () => {
         const { signal } = abortController;
 
         setLoadingFeatures(true)
-        fetch(url, { signal })
-            .then(response => response.json())
+        appHttp<Feature[]>(url, signal)
             .then(data => {
                 setFeatures(data)
             })

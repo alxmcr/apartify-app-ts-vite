@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { appHttp } from "../helpers/appHttp";
 import { City } from "../types/apartmentTypes";
 
 export const useLocationCity = (id = 0) => {
@@ -15,8 +16,7 @@ export const useLocationCity = (id = 0) => {
         const { signal } = abortController;
 
         setLoadingCity(true)
-        fetch(url, { signal })
-            .then(response => response.json())
+        appHttp<City>(url, signal)
             .then(data => {
                 setCity(data)
             })

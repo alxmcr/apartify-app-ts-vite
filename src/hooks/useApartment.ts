@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { appHttp } from "../helpers/appHttp";
 import { Apartment } from "../types/apartmentTypes";
 
 export const useApartment = (id: number) => {
@@ -15,14 +16,9 @@ export const useApartment = (id: number) => {
         const { signal } = abortController;
 
         setLoadingApartment(true)
-        fetch(url, { signal })
-            .then(response => response.json())
+        appHttp<Apartment>(url, signal)
             .then(data => {
-                const { detail } = data;
-
-                if (!detail) {
-                    setApartment(data)
-                }
+                setApartment(data)
             })
             .catch(error => {
                 if (error.name !== 'AbortError') {

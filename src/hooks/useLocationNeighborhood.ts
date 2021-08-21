@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { appHttp } from "../helpers/appHttp";
 import { Neighborhood } from "../types/apartmentTypes";
 
 export const useLocationNeighborhood = (id: number) => {
@@ -15,8 +16,7 @@ export const useLocationNeighborhood = (id: number) => {
         const { signal } = abortController;
 
         setLoadingNeighborhood(true)
-        fetch(url, { signal })
-            .then(response => response.json())
+        appHttp<Neighborhood>(url, signal)
             .then(data => {
                 setNeighborhood(data)
             })
