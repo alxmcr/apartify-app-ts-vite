@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ApartmentBreadcrumbsProps } from "../../../types/apartmentComponents";
+import './ApartmentBreadcrumbs.scss'
 
 export const ApartmentBreadcrumbs = ({
   neighborhood,
@@ -11,7 +12,7 @@ export const ApartmentBreadcrumbs = ({
         Propiedades
       </Link>
       <span className="breadcumbs__address">
-        {` / ${locationState?.st_name} / ${neighborhood?.ne_name}`}
+        {`  /  ${locationState?.st_name}  /  ${neighborhood?.ne_name}`}
       </span>
     </p>
   );
