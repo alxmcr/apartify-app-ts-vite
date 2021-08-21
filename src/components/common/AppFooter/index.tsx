@@ -14,6 +14,7 @@ export const AppFooter = () => {
           />
         </NavLink>
         <h2 className="appfooter__name">Apartify</h2>
+        <p className="appfooter__createdby">Made with ❤️ by Alejandro M. Coca</p>
       </div>
       <div className="appfooter__columns">
         <div className="appfooter__column">
