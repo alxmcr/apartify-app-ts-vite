@@ -1,8 +1,9 @@
-import mapboxgl, { MapboxOptions } from "mapbox-gl";
+import mapboxgl, { MapboxOptions, MarkerOptions } from "mapbox-gl";
 import { useEffect, useRef } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./ApartmentMapMarker.scss";
 import { ApartmentMapMarkerProps } from "../../../types/apartmentComponents";
+import { createCustomMarker } from "../../../helpers/mapHelper";
 
 export const ApartmentMapMarker = ({
   latitude = 19.451119091716365,
@@ -22,7 +23,9 @@ export const ApartmentMapMarker = ({
     var map = new mapboxgl.Map(mapOptions);
 
     map.on("load", function () {
-      const apartMarker = new mapboxgl.Marker();
+      const element = createCustomMarker();
+      const markerOptions: MarkerOptions = { element };
+      const apartMarker = new mapboxgl.Marker(markerOptions);
       apartMarker.setLngLat([longitude, latitude]);
       apartMarker.addTo(map);
     });

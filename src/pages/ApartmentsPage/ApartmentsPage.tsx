@@ -4,7 +4,6 @@ import { AppColumns } from "../../components/common/AppColumns";
 import { AppError } from "../../components/common/AppError";
 import { AppLoading } from "../../components/common/AppLoading";
 import { ApartmentsGrid } from "../../components/grids/ApartmentsGrid";
-import { ApartmentsGallery } from "../../components/xxxxgroups/ApartmentsGallery";
 import { useApartments } from "../../hooks/useApartments";
 import "./ApartmentsPage.scss";
 
@@ -28,12 +27,12 @@ export const ApartmentsPage = () => {
               <ApartmentsGrid apartments={apartments} />
             </AppColumn>
             <AppColumn variant="map">
-              {/* <AparmentsMapCard
+              <AparmentsMapCard
                 defaultLatitude={apartments[0].ap_latitude}
                 defaultLongitude={apartments[0].ap_longitude}
                 levelZoom={13}
                 apartments={apartments}
-              /> */}
+              />
             </AppColumn>
           </>
         </AppColumns>

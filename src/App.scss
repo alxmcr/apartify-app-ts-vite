@@ -1,0 +1,9 @@
+@import 'variables';
+
+.marker--apartment{
+    background-color: $primary;
+    border: 6px solid white;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+}
