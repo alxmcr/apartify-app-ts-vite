@@ -84,6 +84,10 @@ interface ImportMetaEnv {
 
 ![App Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1628141624/Portfolio/appartify-assets/images/apartify-home-page_za33wp.png)
 
+![Apartments](https://res.cloudinary.com/images-alex-projects/image/upload/v1629524217/Portfolio/appartify-assets/images/apartments-map_repfwl.png)
+
+![Apartment](https://res.cloudinary.com/images-alex-projects/image/upload/v1629524217/Portfolio/appartify-assets/images/apartments-map_repfwl.png)
+
   
 ## Demo
 
