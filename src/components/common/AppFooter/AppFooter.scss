@@ -2,30 +2,23 @@
 
 .appfooter {
   background-color: $bg-footer;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: $height-visit-card-small;
-  padding-bottom: 4rem;
-  padding-top: 2rem;
+  padding: 3rem 0;
   &__brand {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 1rem;
+  }
+  &__content {
+    margin-bottom: 2rem;
   }
   &__createdby {
-    font-size: 0.8rem;
-    text-align: center;
-  }
-  &__links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    list-style: none;
+    color: rgb(211, 211, 211);
+    font-size: 0.85rem;
     margin: 0;
-    padding: 0;
+    padding: 2rem 0;
+    text-align: center;
   }
   &__link {
     color: $color-text-footer;
@@ -41,12 +34,29 @@
       color: $primary;
       text-decoration: underline;
     }
+    &--logo {
+      display: block;
+      padding: 1rem 0;
+      text-align: center;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
   &__logo {
     height: $height-logo-footer;
   }
   &__name {
     color: $color-text-footer;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    text-align: center;
   }
   &__subtitle {
     color: $color-heading-footer;
@@ -57,22 +67,23 @@
 
 @media screen and (min-width: 768px) {
   .appfooter {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 7rem;
-    margin-bottom: 0;
-    padding: 2rem 2rem 4rem 2rem;
+    padding: 1rem 0;
+    &__brand {
+      height: 100%;
+    }
     &__columns {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      padding: 1rem 0;
+      gap: 0.5rem;
     }
-    &__link,
-    &__subtitle {
-      text-align: left;
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      gap: 5.5rem;
+      padding: 0 5rem;
+    }
+    &__createdby {
+      padding: 0;
     }
   }
 }
