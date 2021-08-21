@@ -82,7 +82,7 @@ interface ImportMetaEnv {
   
 ## Screenshots
 
-![App Screenshot](https://res.cloudinary.com/images-alex-projects/image/upload/v1628141624/Portfolio/appartify-assets/images/apartify-home-page_za33wp.png)
+![Apartify - Home](https://res.cloudinary.com/images-alex-projects/image/upload/v1629524596/Portfolio/appartify-assets/images/apartify-home_nu9dkd.png)
 
 ![Apartments](https://res.cloudinary.com/images-alex-projects/image/upload/v1629524217/Portfolio/appartify-assets/images/apartments-map_repfwl.png)
 
