@@ -1,6 +1,7 @@
 import { useInvestment } from "../../../hooks/useInvestment";
 import { ApartmentInvestProps } from "../../../types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
+import { KeyIcon } from "../../icons/KeyIcon";
 import "./ApartmentInvest.scss";
 
 export const ApartmentInvest = ({
@@ -14,17 +15,16 @@ export const ApartmentInvest = ({
     return <p>There was an error with this Investment.</p>;
 
   return (
-    <div className="invest">
-      <img
-        src={investment?.in_icon_url}
-        alt={investment?.in_name}
-        className="invest__icon"
-        loading="lazy"
-      />
-      <p className="invest__details">
-        <span className="invest__label">{investment?.in_name}:</span>
-        <span className="invest__value">{inv_value}</span>
-      </p>
-    </div>
+    <>
+      {investment !== null ? (
+        <div className="invest">
+          <KeyIcon in_icon_color={investment?.in_icon_color} />
+          <p className="invest__details">
+            <span className="invest__label">{investment?.in_name}:</span>
+            <span className="invest__value">{inv_value}</span>
+          </p>
+        </div>
+      ) : null}
+    </>
   );
 };

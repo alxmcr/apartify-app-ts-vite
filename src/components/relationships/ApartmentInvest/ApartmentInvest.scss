@@ -5,6 +5,18 @@
   font-size: 0.9rem;
   gap: 0.5rem;
   height: 4rem;
+  &--rent-short {
+    color: #1cb360;
+  }
+  &--occupation {
+    color: #f4ce21;
+  }
+  &--rent-long {
+    color: #c76257
+  }
+  &--monthly-maintenance {
+    color: #4350c9;
+  }
   &__details {
     display: flex;
     flex-direction: column;
