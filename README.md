@@ -3,6 +3,8 @@
 
 Find the apartment of your dreams.
 
+![Apartify - Home](https://res.cloudinary.com/images-alex-projects/image/upload/v1629524596/Portfolio/appartify-assets/images/apartify-home_nu9dkd.png)
+
 
 ## Features
 
@@ -81,8 +83,6 @@ interface ImportMetaEnv {
 
   
 ## Screenshots
-
-![Apartify - Home](https://res.cloudinary.com/images-alex-projects/image/upload/v1629524596/Portfolio/appartify-assets/images/apartify-home_nu9dkd.png)
 
 ![Apartments](https://res.cloudinary.com/images-alex-projects/image/upload/v1629524217/Portfolio/appartify-assets/images/apartments-map_repfwl.png)
 
