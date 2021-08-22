@@ -91,7 +91,7 @@ interface ImportMetaEnv {
   
 ## Demo
 
-[https://apartify.netlify.app/](https://apartify.netlify.app/)
+[https://apartify-app.netlify.app/](https://apartify-app.netlify.app/)
 
   
 ## Authors
