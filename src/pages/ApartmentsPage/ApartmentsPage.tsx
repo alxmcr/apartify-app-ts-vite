@@ -9,6 +9,7 @@ import "./ApartmentsPage.scss";
 
 export const ApartmentsPage = () => {
   const { apartments, errorApartments, loadingApartments } = useApartments();
+  const isProdModeMapbox = import.meta.env.VITE_APP_PROD_MODE_MAPBOX;
 
   if (errorApartments !== null)
     return <AppError errorMessage="There was an error." />;
@@ -27,12 +28,14 @@ export const ApartmentsPage = () => {
               <ApartmentsGrid apartments={apartments} />
             </AppColumn>
             <AppColumn variant="map">
-              <AparmentsMapCard
-                defaultLatitude={apartments[0].ap_latitude}
-                defaultLongitude={apartments[0].ap_longitude}
-                levelZoom={13}
-                apartments={apartments}
-              />
+              {!isProdModeMapbox ? (
+                <AparmentsMapCard
+                  defaultLatitude={apartments[0].ap_latitude}
+                  defaultLongitude={apartments[0].ap_longitude}
+                  levelZoom={13}
+                  apartments={apartments}
+                />
+              ) : null}
             </AppColumn>
           </>
         </AppColumns>
