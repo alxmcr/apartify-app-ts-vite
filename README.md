@@ -66,6 +66,10 @@ Base URL to your REST API.
 
 API REST version: `v1`, `v2`, and so on.
 
+`VITE_APP_MODE_DISPLAY_MAPBOX`
+
+If you want to see the Mapbox's map, you can set this enviroment variable: `PRODUCTION` or if you can't see this map because you don't want to reach your Mapbox limit in free version. You can set `DEVELOPMENT`.
+
 Also we need to add them in `global.d.ts`:
 
 ```javascript
@@ -74,6 +78,7 @@ interface ImportMetaEnv {
     VITE_APP_ACCESS_STYLE_MAP_MAPBOX: string
     VITE_APP_API_VERSION: string
     VITE_APP_API_BASE_URL: string
+    VITE_APP_MODE_DISPLAY_MAPBOX: string
 }
 ```
   
