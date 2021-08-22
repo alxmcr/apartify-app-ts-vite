@@ -16,7 +16,7 @@ import { ApartmentPageParamsProps } from "../../types/apartmentComponents";
 import "./ApartmentPage.scss";
 
 export const ApartmentPage = () => {
-  const isProdModeMapbox = import.meta.env.VITE_APP_PROD_MODE_MAPBOX;
+  const modeDisplayMapbox = import.meta.env.VITE_APP_MODE_DISPLAY_MAPBOX;
   const { id } = useParams<ApartmentPageParamsProps>();
   const ap_apartment = !Number(id) ? "0" : id;
   const { apartment, loadingApartment, errorApartment } = useApartment(
@@ -49,7 +49,7 @@ export const ApartmentPage = () => {
                     <DescriptionCard description={apartment?.ap_description} />
                     <FeaturesCard ap_apartment={apartment?.ap_apartment} />
                     <OutdoorSpacesCard ap_apartment={apartment?.ap_apartment} />
-                    {!isProdModeMapbox ? (
+                    {modeDisplayMapbox === "PRODUCTION" ? (
                       <ApartmentMapCard
                         latitude={apartment?.ap_latitude}
                         longitude={apartment?.ap_longitude}
