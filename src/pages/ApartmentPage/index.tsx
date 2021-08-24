@@ -16,6 +16,7 @@ import { ApartmentPageParamsProps } from "../../types/apartmentComponents";
 import "./ApartmentPage.scss";
 
 export const ApartmentPage = () => {
+  const modeDisplayMapbox = import.meta.env.VITE_APP_MODE_DISPLAY_MAPBOX;
   const { id } = useParams<ApartmentPageParamsProps>();
   const ap_apartment = !Number(id) ? "0" : id;
   const { apartment, loadingApartment, errorApartment } = useApartment(
@@ -45,16 +46,16 @@ export const ApartmentPage = () => {
                       ap_apartment={apartment?.ap_apartment}
                     />
                     <hr />
-                    <DescriptionCard
-                      description={apartment?.ap_description}
-                    />
+                    <DescriptionCard description={apartment?.ap_description} />
                     <FeaturesCard ap_apartment={apartment?.ap_apartment} />
                     <OutdoorSpacesCard ap_apartment={apartment?.ap_apartment} />
-                    <ApartmentMapCard
-                      latitude={apartment?.ap_latitude}
-                      longitude={apartment?.ap_longitude}
-                      levelZoom={13}
-                    />
+                    {modeDisplayMapbox === "PRODUCTION" ? (
+                      <ApartmentMapCard
+                        latitude={apartment?.ap_latitude}
+                        longitude={apartment?.ap_longitude}
+                        levelZoom={13}
+                      />
+                    ) : null}
                     <InvestmentsCard ap_apartment={apartment?.ap_apartment} />
                     <FloorPlanCard ap_apartment={apartment?.ap_apartment} />
                   </>
@@ -67,7 +68,9 @@ export const ApartmentPage = () => {
                 </div>
               </main>
             </>
-          ) : <NotFoundCard />}
+          ) : (
+            <NotFoundCard />
+          )}
         </>
       )}
     </div>

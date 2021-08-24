@@ -1,9 +1,10 @@
 import mapboxgl, { MapboxOptions, MarkerOptions } from "mapbox-gl";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./AparmentMarkersMap.scss";
 import { AparmentMarkersMapProps } from "../../../types/apartmentComponents";
 import { createCustomMarker } from "../../../helpers/mapHelper";
+import { AppLoading } from "../../common/AppLoading";
 
 export const AparmentMarkersMap = ({
   defaultLatitude = 19.451119091716365,
@@ -11,6 +12,7 @@ export const AparmentMarkersMap = ({
   levelZoom = 13,
   apartments = [],
 }: AparmentMarkersMapProps) => {
+  const [mapLoading, setMapLoading] = useState(false);
   const mapContainerRef = useRef(null);
 
   useEffect(() => {
@@ -26,19 +28,25 @@ export const AparmentMarkersMap = ({
     // Add zoom and rotation controls to the map.
     map.addControl(new mapboxgl.NavigationControl());
 
-    map.on("load", function () {
+    map.on('load', () => {
+      setMapLoading(true);
       apartments.forEach((apartment) => {
-        const {ap_latitude, ap_longitude} = apartment;
+        const { ap_latitude, ap_longitude } = apartment;
         const element = createCustomMarker();
         const markerOptions: MarkerOptions = { element };
         const apartMarker = new mapboxgl.Marker(markerOptions);
         apartMarker.setLngLat([ap_longitude, ap_latitude]);
         apartMarker.addTo(map);
       });
-    });
+      setMapLoading(false);
+    })
+
   }, [defaultLongitude, defaultLatitude, levelZoom, apartments]);
 
+
   return (
-    <div id="map_marker" className="map_marker" ref={mapContainerRef}></div>
+    <div id="map_marker" className="map_marker" ref={mapContainerRef}>
+      {mapLoading ? <AppLoading /> : null}
+    </div>
   );
 };
