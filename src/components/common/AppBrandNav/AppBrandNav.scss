@@ -36,6 +36,9 @@
     flex-direction: row;
     gap: 0.5rem;
     justify-content: space-between;
+    &--name {
+      text-decoration: none;
+    }
   }
   &__logo {
     height: $height-logo;
