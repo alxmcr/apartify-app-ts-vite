@@ -15,18 +15,18 @@ export const HomePage = () => {
       />
       <div className="home__column">
         <h1 className="home__phrase">
-          Encuentre el departamento de sus sueños.
+          Encuentra el departamento de tus sueños.
         </h1>
         <p className="home__message">
-          Disfrute la búsqueda del departamento que siempre quiso, de un forma
-          fácil, cómoda y rápida. Y luego cómpralo con
+          Disfruta la búsqueda del departamento que siempre quisiste, de un forma
+          fácil, cómoda y rápida. Cómpralo con
           <span className="home__nameapp">{` Apartify.`}</span>
         </p>
         <button
           className="home__button home__button--cta"
           onClick={buyYourApartment}
         >
-          Compre tu departmento
+          Compra tu departmento
         </button>
       </div>
     </div>
