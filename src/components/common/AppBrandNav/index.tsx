@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AppBrandNavProps } from "../../../types/apartmentComponents";
 import "./AppBrandNav.scss";
 
@@ -8,19 +8,23 @@ export const AppBrandNav = ({ showMenu, setShowMenu }: AppBrandNavProps) => {
   return (
     <div className="appbrandnav">
       <div className="appbrandnav__brand">
-        <Link to="/" className="appbrandnav__link appbrandnav__link--logo">
+        <NavLink to="/" className="appbrandnav__link appbrandnav__link--logo">
           <img
             src="https://res.cloudinary.com/images-alex-projects/image/upload/v1628047381/Portfolio/appartify-assets/svg/apartments-red_oevads.svg"
             alt="Appartify"
             className="appbrandnav__logo"
             loading="lazy"
           />
-        </Link>
-        <h2 className="appbrandnav__name">Apartify</h2>
+        </NavLink>
+        <NavLink to="/" className="appbrandnav__link appbrandnav__link--name">
+          <h2 className="appbrandnav__name">Apartify</h2>
+        </NavLink>
       </div>
       <div className="appbrandnav__icons">
         <button
-          className={`appbrandnav__button brandnav__button--close ${showMenu ? "show" : "hide"}`}
+          className={`appbrandnav__button brandnav__button--close ${
+            showMenu ? "show" : "hide"
+          }`}
           onClick={closeMenu}
         >
           <img
@@ -32,7 +36,9 @@ export const AppBrandNav = ({ showMenu, setShowMenu }: AppBrandNavProps) => {
           />
         </button>
         <button
-          className={`appbrandnav__button brandnav__button--open ${showMenu ? "hide" : "show"}`}
+          className={`appbrandnav__button brandnav__button--open ${
+            showMenu ? "hide" : "show"
+          }`}
           onClick={openMenu}
         >
           <img
