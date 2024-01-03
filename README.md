@@ -56,11 +56,11 @@ You should put as value the API KEY that you got from [Mapbox's API](https://www
 
 `VITE_APP_ACCESS_STYLE_MAP_MAPBOX`
 
-Mapbox styles (like `mapbox://styles/mapbox/streets-v11` or `mapbox://styles/mapbox/outdoors-v11`).
+[Mapbox styles](https://docs.mapbox.com/api/maps/styles/) (like `mapbox://styles/mapbox/streets-v12` or `mapbox://styles/mapbox/outdoors-v11`).
 
 `VITE_APP_API_BASE_URL`
 
-Base URL to your REST API.
+Base URL to your REST API (e.g. `http://127.0.0.1:8000`).
 
 `VITE_APP_API_VERSION`
 
@@ -69,6 +69,8 @@ API REST version: `v1`, `v2`, and so on.
 `VITE_APP_MODE_DISPLAY_MAPBOX`
 
 If you want to see the Mapbox's map, you can set this enviroment variable: `PRODUCTION` or if you can't see this map because you don't want to reach your Mapbox limit in free version. You can set `DEVELOPMENT`.
+
+## Vite config
 
 Also we need to add them in `global.d.ts`:
 
