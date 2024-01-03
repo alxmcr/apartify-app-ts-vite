@@ -50,30 +50,13 @@ Start the server
 
 To run this project, you will need to add the following environment variables to your `.env` file
 
-### Mapbox Display mode (`VITE_APP_MODE_DISPLAY_MAPBOX`)
-
-If you want to see the Mapbox's map, you can set this enviroment variable: `PRODUCTION` or if you can't see this map because you don't want to reach your Mapbox limit in free version. You can set `DEVELOPMENT`.
-
-### Mapbox access token (`VITE_APP_ACCESS_TOKEN_MAPBOX`)
-
-You should put as value the API KEY that you got from [Mapbox's API](https://www.mapbox.com/).
-
-### Mapbox style map (`VITE_APP_ACCESS_STYLE_MAP_MAPBOX`)
-
-Visti [Mapbox styles](https://docs.mapbox.com/api/maps/styles/).
-
-Examples like 
-- `mapbox://styles/mapbox/streets-v12` or 
-- `mapbox://styles/mapbox/outdoors-v11`
-
-### Backend API URL (`VITE_APP_API_BASE_URL`)
-
-Base URL to your REST API (e.g. `http://127.0.0.1:8000`).
-
-### Backend API Version (`VITE_APP_API_VERSION`)
-
-API REST version: `v1`, `v2`, and so on.
-
+| ENV Variable                       | Description                                                                                                                                                                                                        | Possible values                                                               |
+|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| `VITE_APP_MODE_DISPLAY_MAPBOX`     | If you want to see the Mapbox's map, you can set this enviroment variable: PRODUCTION or if you can't see this map because **you don't want to reach your Mapbox limit in free version**. You can set DEVELOPMENT. | `PRODUCTION` / `DEVELOPMENT`                                                  |
+| `VITE_APP_ACCESS_TOKEN_MAPBOX`     | You should put as value the API KEY that you got from Mapbox's API.                                                                                                                                                | `<mapbox_token>`                                                            |
+| `VITE_APP_ACCESS_STYLE_MAP_MAPBOX` | Visit [Mapbox styles](https://docs.mapbox.com/api/maps/styles/).                                                                                                                                                   | `mapbox://styles/mapbox/streets-v12` or `mapbox://styles/mapbox/outdoors-v11` |
+| `VITE_APP_API_BASE_URL`            | Base URL to your REST API.                                                                                                                                                                                         | `http://127.0.0.1:8000`                                                       |
+| `VITE_APP_API_VERSION`             | API REST version                                                                                                                                                                                                   | `v1`, `v2`, and so on.                                                         |
 
 
 ## Vite config
