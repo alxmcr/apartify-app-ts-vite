@@ -23,10 +23,6 @@ export const useApartments = () => {
         const apiApartments = await service.findAll();
         setApartments(apiApartments);
       } catch (error) {
-        console.log(
-          "🚀 ~ file: useApartments.ts:26 ~ fetchApartments ~ error:",
-          error
-        );
         if (error instanceof Error) {
           setErrorApartments(error);
         }

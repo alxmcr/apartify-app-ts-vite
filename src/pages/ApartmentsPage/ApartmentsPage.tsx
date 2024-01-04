@@ -12,7 +12,7 @@ export const ApartmentsPage = () => {
   const modeDisplayMapbox = import.meta.env.VITE_APP_MODE_DISPLAY_MAPBOX;
 
   if (errorApartments !== null) {
-    return <AppError errorMessage="There was an error." />;
+    return <AppError errorMessage={errorApartments.message} />;
   }
 
   return loadingApartments ? (
