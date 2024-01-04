@@ -17,9 +17,26 @@ export class ApartmentsServiceImpl implements IApartmentsService {
     // Abort fetch
     const { signal } = this.abortController;
 
-    const response = await fetch(this.urlAPI, { signal });
-    const body = await response.json();
+    // Body
+    let body: Apartment[] = [];
 
-    return body as Promise<Apartment[]>;
+    try {
+      const response = await fetch(this.urlAPI, { signal });
+
+      if (response.ok) {
+        body = await response.json();
+      } else if (response.status === 404) {
+        throw new Error("User not found.");
+      } else if (response.status === 500) {
+        throw new Error("Internal server error.");
+      } else {
+        // Handle other errors
+        throw new Error(`An error occurred:, ${response.status}`);
+      }
+    } catch (error) {
+      throw error;
+    }
+
+    return body;
   }
 }
