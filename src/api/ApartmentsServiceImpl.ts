@@ -1,7 +1,7 @@
 import { Apartment } from "../@types/apartmentTypes";
-import { IApartments } from "./IApartments";
+import { IApartmentsService } from "./IApartmentsService";
 
-export class ApartmentsImpl implements IApartments {
+export class ApartmentsServiceImpl implements IApartmentsService {
   private urlAPI: string;
   private abortController: AbortController;
 

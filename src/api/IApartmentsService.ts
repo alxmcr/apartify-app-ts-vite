@@ -1,5 +1,5 @@
 import { Apartment } from "../@types/apartmentTypes";
 
-export interface IApartments {
+export interface IApartmentsService {
   findAll(): Promise<Apartment[]>;
 }
