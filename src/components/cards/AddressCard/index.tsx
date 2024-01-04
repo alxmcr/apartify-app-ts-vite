@@ -1,7 +1,7 @@
 import { useLocationCity } from "../../../hooks/useLocationCity";
 import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
 import { useLocationState } from "../../../hooks/useLocationState";
-import { AddressCardProps } from "../../../types/apartmentComponents";
+import { AddressCardProps } from "../../../@types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import { ApartmentBreadcrumbs } from "../../pieces/ApartmentBreadcrumbs";
 import { ApartmentDetails } from "../../pieces/ApartmentDetails";

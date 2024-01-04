@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { AppBrandNavProps } from "../../../types/apartmentComponents";
+import { AppBrandNavProps } from "../../../@types/apartmentComponents";
 import "./AppBrandNav.scss";
 
 export const AppBrandNav = ({ showMenu, setShowMenu }: AppBrandNavProps) => {

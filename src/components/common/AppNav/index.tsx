@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { AppNavProps } from "../../../types/apartmentComponents";
+import { AppNavProps } from "../../../@types/apartmentComponents";
 import './AppNav.scss'
 
 export const AppNav = ({ showMenu }: AppNavProps) => {

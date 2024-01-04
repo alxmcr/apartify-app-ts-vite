@@ -1,7 +1,7 @@
 import { useHistory } from "react-router-dom";
 import { useAttracts } from "../../../hooks/useAttracts";
 import { useLocationNeighborhood } from "../../../hooks/useLocationNeighborhood";
-import { ApartmentCardProps } from "../../../types/apartmentComponents";
+import { ApartmentCardProps } from "../../../@types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import { ApartmentAttractIconsGroup } from "../../groups/ApartmentAttractIconsGroup";
 import { ApartmentAddress } from "../../pieces/ApartmentAddress";

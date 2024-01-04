@@ -1,5 +1,5 @@
 import { useAttracts } from "../../../hooks/useAttracts";
-import { FeaturesCardProps } from "../../../types/apartmentComponents";
+import { FeaturesCardProps } from "../../../@types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import { ApartmentAttractGrid } from "../../grids/ApartmentAttractGrid";
 import './FeaturesCard.scss'

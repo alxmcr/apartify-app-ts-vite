@@ -1,5 +1,5 @@
 import { useOutdoors } from "../../../hooks/useOutdoors";
-import { OutdoorSpacesCardProps } from "../../../types/apartmentComponents";
+import { OutdoorSpacesCardProps } from "../../../@types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import { ApartmentOutdoorGrid } from "../../grids/ApartmentOutdoorGrid";
 import './OutdoorSpacesCard.scss'

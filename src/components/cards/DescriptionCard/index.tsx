@@ -1,4 +1,4 @@
-import { DescriptionCardProps } from "../../../types/apartmentComponents";
+import { DescriptionCardProps } from "../../../@types/apartmentComponents";
 import "./DescriptionCard.scss";
 
 export const DescriptionCard = ({ description = "" }: DescriptionCardProps) => {

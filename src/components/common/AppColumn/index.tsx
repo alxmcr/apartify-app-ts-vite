@@ -1,4 +1,4 @@
-import { AppColumnProps } from "../../../types/apartmentComponents";
+import { AppColumnProps } from "../../../@types/apartmentComponents";
 import "./AppColumn.scss";
 
 export const AppColumn = ({ children, variant = "" }: AppColumnProps) => {

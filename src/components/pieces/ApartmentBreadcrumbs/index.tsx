@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ApartmentBreadcrumbsProps } from "../../../types/apartmentComponents";
+import { ApartmentBreadcrumbsProps } from "../../../@types/apartmentComponents";
 import './ApartmentBreadcrumbs.scss'
 
 export const ApartmentBreadcrumbs = ({

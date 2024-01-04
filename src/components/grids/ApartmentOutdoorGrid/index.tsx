@@ -1,4 +1,4 @@
-import { ApartmentOutdoorGridProps } from "../../../types/apartmentComponents";
+import { ApartmentOutdoorGridProps } from "../../../@types/apartmentComponents";
 import { ApartmentOutdoor } from "../../relationships/ApartmentOutdoor";
 import "./ApartmentOutdoorGrid.scss";
 

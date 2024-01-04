@@ -2,7 +2,7 @@ import mapboxgl, { MapboxOptions, MarkerOptions } from "mapbox-gl";
 import { useEffect, useRef, useState } from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./AparmentMarkersMap.scss";
-import { AparmentMarkersMapProps } from "../../../types/apartmentComponents";
+import { AparmentMarkersMapProps } from "../../../@types/apartmentComponents";
 import { createCustomMarker } from "../../../helpers/mapHelper";
 import { AppLoading } from "../../common/AppLoading";
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { appHttp } from "../helpers/appHttp";
-import { Apartment } from "../types/apartmentTypes";
+import { Apartment } from "../@types/apartmentTypes";
 
 export const useApartments = () => {
     const [apartments, setApartments] = useState<Apartment[]>([])

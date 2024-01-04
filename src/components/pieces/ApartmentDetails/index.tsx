@@ -1,4 +1,4 @@
-import { ApartmentDetailsProps } from "../../../types/apartmentComponents";
+import { ApartmentDetailsProps } from "../../../@types/apartmentComponents";
 import "./ApartmentDetails.scss";
 
 export const ApartmentDetails = ({

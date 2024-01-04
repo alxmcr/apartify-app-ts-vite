@@ -1,5 +1,5 @@
 import { useAttracts } from "../../../hooks/useAttracts";
-import { ApartmentAttractIconsGroupProps } from "../../../types/apartmentComponents";
+import { ApartmentAttractIconsGroupProps } from "../../../@types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import { ApartmentAttractIconsList } from "../../lists/ApartmentAttractIconsList";
 import "./ApartmentAttractIconsGroup.scss";

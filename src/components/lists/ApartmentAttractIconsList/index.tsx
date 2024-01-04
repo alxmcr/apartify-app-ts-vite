@@ -1,4 +1,4 @@
-import { ApartmentAttractIconsListProps } from "../../../types/apartmentComponents";
+import { ApartmentAttractIconsListProps } from "../../../@types/apartmentComponents";
 import { ApartmentAttractIcon } from "../../relationships/ApartmentAttractIcon";
 import "./ApartmentAttractIconsList.scss";
 
