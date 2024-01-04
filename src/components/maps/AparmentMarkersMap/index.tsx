@@ -16,6 +16,7 @@ export const AparmentMarkersMap = ({
   const mapContainerRef = useRef(null);
 
   useEffect(() => {
+    // Mapbox options
     const mapOptions: MapboxOptions = {
       accessToken: import.meta.env.VITE_APP_ACCESS_TOKEN_MAPBOX,
       container: "map_marker",
@@ -23,6 +24,8 @@ export const AparmentMarkersMap = ({
       center: [defaultLongitude, defaultLatitude],
       zoom: levelZoom,
     };
+
+    // Creating map
     var map = new mapboxgl.Map(mapOptions);
 
     // Add zoom and rotation controls to the map.
