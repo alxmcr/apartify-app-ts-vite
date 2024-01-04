@@ -1,5 +1,5 @@
 import { useOutdoorSpace } from "../../../hooks/useOutdoorSpace";
-import { ApartmentOutdoorProps } from "../../../types/apartmentComponents";
+import { ApartmentOutdoorProps } from "../../../@types/apartmentComponents";
 
 export const ApartmentOutdoorSpace = ({
   ou_outdoor_space = 0,

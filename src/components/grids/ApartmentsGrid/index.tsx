@@ -1,4 +1,4 @@
-import { ApartmentsGridProps } from "../../../types/apartmentComponents";
+import { ApartmentsGridProps } from "../../../@types/apartmentComponents";
 import { ApartmentCard } from "../../cards/ApartmentCard";
 import "./ApartmentsGrid.scss";
 

@@ -1,4 +1,4 @@
-import { ApartmentPhotoGridProps } from "../../../types/apartmentComponents";
+import { ApartmentPhotoGridProps } from "../../../@types/apartmentComponents";
 import "./ApartmentPhotoGrid.scss";
 
 export const ApartmentPhotoGrid = ({

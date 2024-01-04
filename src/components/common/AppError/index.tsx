@@ -1,4 +1,4 @@
-import { AppErrorProps } from "../../../types/apartmentComponents";
+import { AppErrorProps } from "../../../@types/apartmentComponents";
 import "./AppError.scss";
 
 export const AppError = ({ errorMessage }: AppErrorProps) => {

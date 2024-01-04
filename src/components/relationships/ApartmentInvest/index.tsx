@@ -1,5 +1,5 @@
 import { useInvestment } from "../../../hooks/useInvestment";
-import { ApartmentInvestProps } from "../../../types/apartmentComponents";
+import { ApartmentInvestProps } from "../../../@types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import { KeyIcon } from "../../icons/KeyIcon";
 import "./ApartmentInvest.scss";

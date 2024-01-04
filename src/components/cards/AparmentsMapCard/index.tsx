@@ -1,4 +1,4 @@
-import { AparmentsMapCardProps } from "../../../types/apartmentComponents";
+import { AparmentsMapCardProps } from "../../../@types/apartmentComponents";
 import { AparmentMarkersMap } from "../../maps/AparmentMarkersMap";
 import "./AparmentsMapCard.scss";
 

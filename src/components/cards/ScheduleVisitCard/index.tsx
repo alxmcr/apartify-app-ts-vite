@@ -1,4 +1,4 @@
-import { ScheduleVisitCardProps } from "../../../types/apartmentComponents";
+import { ScheduleVisitCardProps } from "../../../@types/apartmentComponents";
 import "./ScheduleVisitCard.scss";
 
 export const ScheduleVisitCard = ({

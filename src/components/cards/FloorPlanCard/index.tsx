@@ -1,5 +1,5 @@
 import { useFloorPlans } from "../../../hooks/useFloorPlans";
-import { FloorPlanCardProps } from "../../../types/apartmentComponents";
+import { FloorPlanCardProps } from "../../../@types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import "./FloorPlanCard.scss";
 

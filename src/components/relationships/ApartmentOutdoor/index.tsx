@@ -1,5 +1,5 @@
 import { useOutdoorSpace } from "../../../hooks/useOutdoorSpace";
-import { ApartmentOutdoorProps } from "../../../types/apartmentComponents";
+import { ApartmentOutdoorProps } from "../../../@types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import "./ApartmentOutdoor.scss";
 

@@ -1,5 +1,5 @@
 import { useInvests } from "../../../hooks/useInvests";
-import { InvestmentsCardProps } from "../../../types/apartmentComponents";
+import { InvestmentsCardProps } from "../../../@types/apartmentComponents";
 import { AppCircleLoader } from "../../common/AppCircleLoader";
 import { ApartmentInvestGrid } from "../../grids/ApartmentInvestGrid";
 import './InvestmentsCard.scss'

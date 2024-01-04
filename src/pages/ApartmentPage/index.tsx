@@ -12,7 +12,7 @@ import { AppLoading } from "../../components/common/AppLoading";
 import { ApartmentAttractIconsGroup } from "../../components/groups/ApartmentAttractIconsGroup";
 import { ApartmentPhotoSection } from "../../components/sections/ApartmentPhotoSection";
 import { useApartment } from "../../hooks/useApartment";
-import { ApartmentPageParamsProps } from "../../types/apartmentComponents";
+import { ApartmentPageParamsProps } from "../../@types/apartmentComponents";
 import "./ApartmentPage.scss";
 
 export const ApartmentPage = () => {
