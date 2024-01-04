@@ -34,6 +34,12 @@ export class ApartmentsServiceImpl implements IApartmentsService {
         throw new Error(`An error occurred:, ${response.status}`);
       }
     } catch (error) {
+      if (error instanceof TypeError && error.message === "Failed to fetch") {
+        throw new Error(
+          "Failed to fetch. Please check your network connection."
+        );
+      }
+
       throw error;
     }
 
