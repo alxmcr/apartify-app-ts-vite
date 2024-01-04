@@ -8,14 +8,24 @@ export const AparmentsMapCard = ({
   levelZoom = 13,
   apartments = [],
 }: AparmentsMapCardProps) => {
+  const modeDisplayMapbox = import.meta.env.VITE_APP_MODE_DISPLAY_MAPBOX;
+
+  if (modeDisplayMapbox === "PRODUCTION") {
+    return (
+      <div className="apartments_map_card">
+        <AparmentMarkersMap
+          defaultLatitude={defaultLatitude}
+          defaultLongitude={defaultLongitude}
+          levelZoom={levelZoom}
+          apartments={apartments}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="apartments_map_card">
-      <AparmentMarkersMap
-        defaultLatitude={defaultLatitude}
-        defaultLongitude={defaultLongitude}
-        levelZoom={levelZoom}
-        apartments={apartments}
-      />
+      <p>Only on production map can be rendered</p>
     </div>
   );
 };

@@ -28,14 +28,12 @@ export const ApartmentsPage = () => {
               <ApartmentsGrid apartments={apartments} />
             </AppColumn>
             <AppColumn variant="map">
-              {modeDisplayMapbox === "PRODUCTION" ? (
-                <AparmentsMapCard
-                  defaultLatitude={apartments[0].ap_latitude}
-                  defaultLongitude={apartments[0].ap_longitude}
-                  levelZoom={13}
-                  apartments={apartments}
-                />
-              ) : null}
+              <AparmentsMapCard
+                defaultLatitude={apartments[0].ap_latitude}
+                defaultLongitude={apartments[0].ap_longitude}
+                levelZoom={13}
+                apartments={apartments}
+              />
             </AppColumn>
           </>
         </AppColumns>
